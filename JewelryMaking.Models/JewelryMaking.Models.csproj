@@ -41,7 +41,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bead\BeadCreate.cs" />
+    <Compile Include="Bead\BeadDetail.cs" />
+    <Compile Include="Bead\BeadEdit.cs" />
+    <Compile Include="Bead\BeadListAll.cs" />
+    <Compile Include="Finding\FindingCreate.cs" />
+    <Compile Include="Finding\FindingDetail.cs" />
+    <Compile Include="Finding\FindingEdit.cs" />
+    <Compile Include="Finding\FindingListAll.cs" />
+    <Compile Include="Location\LocationCreate.cs" />
+    <Compile Include="Location\LocationDetail.cs" />
+    <Compile Include="Location\LocationEdit.cs" />
+    <Compile Include="Location\LocationListAll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\SourceCreate.cs" />
+    <Compile Include="Source\SourceDetail.cs" />
+    <Compile Include="Source\SourceEdit.cs" />
+    <Compile Include="Source\SourceListAll.cs" />
+    <Compile Include="StringingMaterial\StringingMaterialCreate.cs" />
+    <Compile Include="StringingMaterial\StringingMaterialDetail.cs" />
+    <Compile Include="StringingMaterial\StringingMaterialEdit.cs" />
+    <Compile Include="StringingMaterial\StringingMaterialListAll.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

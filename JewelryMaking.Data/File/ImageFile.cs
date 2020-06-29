@@ -11,6 +11,5 @@ namespace JewelryMaking.Data
         public virtual Bead Bead { get; set; }
         public virtual StringingMaterial StringingMaterial { get; set; }
         public virtual Finding Finding { get; set; }
-
     }
 }

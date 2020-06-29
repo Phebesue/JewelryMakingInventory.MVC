@@ -18,13 +18,16 @@ namespace JewelryMaking.Data
         public double Size { get; set; }
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
+        [Required]
         [Display(Name = "Length in Inches")]
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
         public double Cost { get; set; }
-        public string Description { get; set; }
+        [Required]
         public virtual Location Location { get; set; }
         public virtual Source Source { get; set; }
+        [MaxLength(8000, ErrorMessage = "Too Long.")]
+        public string Description { get; set; }
         [Display(Name = "Image")]
         public ImageFile StringingImage { get; set; }
     }

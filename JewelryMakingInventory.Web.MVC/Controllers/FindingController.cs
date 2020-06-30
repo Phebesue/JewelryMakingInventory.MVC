@@ -8,7 +8,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 {
     public class FindingController : Controller
     {
-        // GET: Finding
+        // GET: Finding/Index
         public ActionResult Index()
         {
             return View();

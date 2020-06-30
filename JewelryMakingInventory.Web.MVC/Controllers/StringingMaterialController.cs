@@ -8,7 +8,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 {
     public class StringingMaterialController : Controller
     {
-        // GET: StringingMaterial
+        // GET: StringingMaterial/Index
         public ActionResult Index()
         {
             return View();

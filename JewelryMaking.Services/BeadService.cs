@@ -27,7 +27,7 @@ namespace JewelryMaking.Services
                 Location = model.Location,
                 Source = model.Source,
                 Description = model.Description,
-                BeadImage = model.BeadImage
+                //BeadImage = model.BeadImage
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -101,7 +101,7 @@ namespace JewelryMaking.Services
                 entity.Location = model.Location;
                 entity.Source = model.Source;
                 entity.Description = model.Description;
-                entity.BeadImage = model.BeadImage;
+                //entity.BeadImage = model.BeadImage;
                 return ctx.SaveChanges() == 1;
             }
         }

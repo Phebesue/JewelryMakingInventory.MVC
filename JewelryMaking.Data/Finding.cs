@@ -27,6 +27,7 @@ namespace JewelryMaking.Data
         [Required]
         public virtual Location Location { get; set; }
         public virtual Source Source { get; set; }
-        public ImageFile FindingImage { get; set; }
+        //[Display(Name = "Image")]
+        //public ImageFile FindingImage { get; set; }
     }
 }

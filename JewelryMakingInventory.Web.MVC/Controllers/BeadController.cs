@@ -8,7 +8,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 {
     public class BeadController : Controller
     {
-        // GET: Bead
+        // GET: Bead/Index
         public ActionResult Index()
         {
             return View();

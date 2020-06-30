@@ -30,7 +30,7 @@ namespace JewelryMaking.Data
         public virtual Source Source { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        [Display(Name = "Image")]
-        public virtual ImageFile BeadImage { get; set; }
+        //[Display(Name = "Image")]
+        //public virtual ImageFile BeadImage { get; set; }
     }
 }

@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-   public class SourceDetail
+    public class SourceDetail
     {
+        public int SourceId { get; set; }
         public string Name { get; set; }
         public string WebSite { get; set; }
         [Display(Name = "Show or Location")]
@@ -17,7 +18,7 @@ namespace JewelryMaking.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-        public string Notes { get; set; }
+        public string Note { get; set; }
     }
 }
 

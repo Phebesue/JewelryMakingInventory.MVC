@@ -24,6 +24,6 @@ namespace JewelryMaking.Data
         [MaxLength(10, ErrorMessage = "There are too many characters in this field.")]
         public string ZipCode { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
-        public string Notes { get; set; }
+        public string Note { get; set; }
     }
 }

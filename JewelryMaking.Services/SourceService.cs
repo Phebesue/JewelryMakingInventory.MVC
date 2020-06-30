@@ -16,7 +16,6 @@ namespace JewelryMaking.Services
         {
             var entity = new Source()
             {
-                //SourceId = model.SourceId,
                 Name = model.Name,
                 WebSite = model.WebSite,
                 ShowOrLocation = model.ShowOrLocation,
@@ -37,20 +36,21 @@ namespace JewelryMaking.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Sources.ToList();
-                List<SourceListAll> Result = new
-                List<SourceListAll>();
-                foreach (Source e in query)
-                {
-                    SourceListAll source = new SourceListAll
+                var query =
+                    ctx.Sources
+                    .Select(
+                    e =>
+                    new SourceListAll
                     {
                         SourceId = e.SourceId,
                         Name = e.Name,
-                        ShowOrLocation = e.ShowOrLocation
-                    };
-                    Result.Add(source);
-                }
-                return Result;
+                        ShowOrLocation = e.ShowOrLocation,
+                    }
+                    );
+                //    Result.Add(source);
+                //}
+                //return Result;
+                return query.ToArray();
             }
         }
         //___________________Get-By Id____________

@@ -10,6 +10,7 @@ namespace JewelryMaking.Data
     public class Source
     {
         [Key]
+        [Display(Name = "Source #")]
         public int SourceId { get; set; }
         [Required]
         public string Name { get; set; }

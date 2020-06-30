@@ -94,7 +94,7 @@ namespace JewelryMaking.Services
         //___________________Delete____________
         public bool DeleteSource(int SourceId)
         {
-            using(var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Sources
                     .Single(e => e.SourceId == SourceId);

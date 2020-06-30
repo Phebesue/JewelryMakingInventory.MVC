@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,6 +63,12 @@
     <Compile Include="StringingMaterial\StringingMaterialDetail.cs" />
     <Compile Include="StringingMaterial\StringingMaterialEdit.cs" />
     <Compile Include="StringingMaterial\StringingMaterialListAll.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JewelryMaking.Data\JewelryMaking.Data.csproj">
+      <Project>{11C06CC7-1625-4E07-B25F-435AFFF67504}</Project>
+      <Name>JewelryMaking.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

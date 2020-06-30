@@ -12,9 +12,11 @@ namespace JewelryMaking.Data
     {
         [Key]
         public int LocationId { get; set; }
+        [Required]
         public string Kind { get; set; }
         public string Size { get; set; }
         public string Color { get; set; }
+        [Required]
         public string Place { get; set; }
     }
 }

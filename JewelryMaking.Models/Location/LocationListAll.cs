@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-   public class LocationListAll
+    public class LocationListAll
     {
+        public int LocationId { get; set; }
+        public string Kind { get; set; }
+        public string Size { get; set; }
+        public string Color { get; set; }
+        //public string Place { get; set; }
+
     }
 }

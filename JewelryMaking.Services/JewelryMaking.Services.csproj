@@ -48,5 +48,11 @@
     <Compile Include="SourceService.cs" />
     <Compile Include="StringingMaterialService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JewelryMaking.Data\JewelryMaking.Data.csproj">
+      <Project>{11c06cc7-1625-4e07-b25f-435afff67504}</Project>
+      <Name>JewelryMaking.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

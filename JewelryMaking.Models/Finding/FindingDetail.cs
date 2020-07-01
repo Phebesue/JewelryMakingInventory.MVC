@@ -10,6 +10,7 @@ namespace JewelryMaking.Models
 {
    public class FindingDetail
     {
+        [Display(Name ="Finding ID #")]
         public int FindingId { get; set; }
         public string Category { get; set; }
         public string SubType { get; set; }
@@ -21,9 +22,9 @@ namespace JewelryMaking.Models
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
         public string Description { get; set; }
-        public virtual Location Location { get; set; }
-        public virtual Source Source { get; set; }
-        public ImageFile FindingImage { get; set; }
+        //public virtual Location Location { get; set; }
+        //public virtual Source Source { get; set; }
+        //public ImageFile FindingImage { get; set; }
 
     }
 }

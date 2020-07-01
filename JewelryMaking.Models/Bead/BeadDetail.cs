@@ -10,6 +10,7 @@ namespace JewelryMaking.Models
 {
    public class BeadDetail
     {
+        [Display(Name = "Bead ID #")]
         public int BeadId { get; set; }
         public string Brand { get; set; }
         public string Type { get; set; }
@@ -24,7 +25,7 @@ namespace JewelryMaking.Models
         public virtual Location Location { get; set; }
         public virtual Source Source { get; set; }
         public string Description { get; set; }
-        [Display(Name = "Image")]
-        public virtual ImageFile BeadImage { get; set; }
+        //[Display(Name = "Image")]
+        //public virtual ImageFile BeadImage { get; set; }
     }
 }

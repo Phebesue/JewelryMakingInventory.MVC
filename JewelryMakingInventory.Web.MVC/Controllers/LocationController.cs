@@ -39,7 +39,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        //GET: Location/Details
+        //GET: Location/Details/{id}
         public ActionResult Details(int id)
         {
             var svc = new LocationService();
@@ -47,7 +47,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        //GET:Location/Edit
+        //GET:Location/Edit/{id}
         public ActionResult Edit(int id)
         {
             var service = new LocationService();
@@ -62,7 +62,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             };
             return View(model);
         }
-        //POST: Location/Edit
+        //POST: Location/Edit/{id}
         [HttpPost]
         public ActionResult Edit(int id, LocationEdit model)
         {
@@ -81,7 +81,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             ModelState.AddModelError("", "Your location could not be updated.");
             return View(model);
         }
-        //GET Location/Delete
+        //GET Location/Delete/{id}
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -90,7 +90,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        //POST: Location/Delete
+        //POST: Location/Delete/{id}
         [HttpPost]
         [ActionName("Delete")]
         public ActionResult DeletePost (int id)

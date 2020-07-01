@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 namespace JewelryMaking.Services
 {
     public class LocationService
-    { //___________________Create____________
+    { //___________________Post-Create____________
         public bool CreateLocation(LocationCreate model)
         {
             var entity = new Location()
             {
-                //LocationId = model.LocationId,
                 Kind = model.Kind,
                 Size = model.Size,
                 Color = model.Color,

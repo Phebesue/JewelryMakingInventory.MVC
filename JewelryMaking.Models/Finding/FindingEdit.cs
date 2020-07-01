@@ -12,6 +12,7 @@ namespace JewelryMaking.Models
     {
         
         [Required]
+        [Display(Name = "Finding ID #")] 
         public int FindingId { get; set; }
         [Required]
         public string Category { get; set; }
@@ -26,10 +27,10 @@ namespace JewelryMaking.Models
         public double Cost { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        [Required]
-        public virtual Location Location { get; set; }
-        public virtual Source Source { get; set; }
-        public ImageFile FindingImage { get; set; }
+        //[Required]
+        //public virtual Location Location { get; set; }
+        //public virtual Source Source { get; set; }
+        //public ImageFile FindingImage { get; set; }
 
     }
 }

@@ -10,6 +10,7 @@ namespace JewelryMaking.Models
 {
    public class StringingMaterialListAll
     {
+      [Display(Name ="Stringing Material ID #")]
         public int StringingMaterialId { get; set; }
         public string Type { get; set; }
         public string Material { get; set; }
@@ -20,7 +21,7 @@ namespace JewelryMaking.Models
         //public double Length { get; set; }
         //[Display(Name = "Cost per Inch")]
        // public double Cost { get; set; }
-        public virtual Location Location { get; set; }
+        //public virtual Location Location { get; set; }
         //[Display(Name = "Image")]
         //public ImageFile StringingImage { get; set; }
     }

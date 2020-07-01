@@ -20,11 +20,11 @@ namespace JewelryMaking.Models
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
         public double Cost { get; set; }
-        public virtual Location Location { get; set; }
-        public virtual Source Source { get; set; }
-        [MaxLength(8000, ErrorMessage = "Too Long.")]
+        //[MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        [Display(Name = "Image")]
-        public ImageFile StringingImage { get; set; }
+        //public virtual Location Location { get; set; }
+        //public virtual Source Source { get; set; }
+        //[Display(Name = "Image")]
+        //public ImageFile StringingImage { get; set; }
     }
 }

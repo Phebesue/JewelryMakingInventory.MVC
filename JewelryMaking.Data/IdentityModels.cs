@@ -31,36 +31,38 @@ namespace JewelryMaking.Data
         {
             return new ApplicationDbContext();
         }
+        //public DbSet<File> Files { get; set; }
+        //public DbSet<ImageFile> ImageFiles { get; set; }
         public DbSet<Source> Sources { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Bead> Beads { get; set; }
         public DbSet<StringingMaterial> StringingMaterials { get; set; }
         public DbSet<Finding> Findings { get; set; }
 
-    //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    //    {
-    //        modelBuilder
-    //            .Conventions
-    //            .Remove<PluralizingTableNameConvention>();
+        //    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //    {
+        //        modelBuilder
+        //            .Conventions
+        //            .Remove<PluralizingTableNameConvention>();
 
-    //        modelBuilder
-    //            .Configurations
-    //            .Add(new IdentityUserLoginConfiguration())
-    //            .Add(new IdentityUserRoleConfiguration());
-    //    }
-    //}
-    //public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
-    //{
-    //    public IdentityUserLoginConfiguration()
-    //    {
-    //        HasKey(iul => iul.UserId);
-    //    }
-    //}
-    //public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
-    //{
-    //    public IdentityUserRoleConfiguration()
-    //    {
-    //        HasKey(iur => iur.UserId);
-    //    }
+        //        modelBuilder
+        //            .Configurations
+        //            .Add(new IdentityUserLoginConfiguration())
+        //            .Add(new IdentityUserRoleConfiguration());
+        //    }
+        //}
+        //public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
+        //{
+        //    public IdentityUserLoginConfiguration()
+        //    {
+        //        HasKey(iul => iul.UserId);
+        //    }
+        //}
+        //public class IdentityUserRoleConfiguration : EntityTypeConfiguration<IdentityUserRole>
+        //{
+        //    public IdentityUserRoleConfiguration()
+        //    {
+        //        HasKey(iur => iur.UserId);
+        //    }
     }
 }

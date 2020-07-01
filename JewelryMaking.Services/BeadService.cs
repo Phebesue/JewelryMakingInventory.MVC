@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 namespace JewelryMaking.Services
 {
     public class BeadService
-    {//___________________Create____________
+    {//___________________Post-Create____________
         public bool CreateBead(BeadCreate model)
         {
             var entity = new Bead()
             {
-                //BeadId = model.BeadId,
                 Brand = model.Brand,
                 Type = model.Type,
                 SubType = model.SubType,
@@ -24,9 +23,9 @@ namespace JewelryMaking.Services
                 Color = model.Color,
                 Quantity = model.Quantity,
                 Cost = model.Cost,
-                Location = model.Location,
-                Source = model.Source,
-                Description = model.Description,
+                Description = model.Description
+                //Location = model.Location,
+                //Source = model.Source,
                 //BeadImage = model.BeadImage
             };
             using (var ctx = new ApplicationDbContext())
@@ -51,7 +50,7 @@ namespace JewelryMaking.Services
                         Type = e.Type,
                         Shape = e.Shape,
                         Color = e.Color,
-                        Location = e.Location,
+                        //Location = e.Location,
                         //BeadImage = e.BeadImage
                     };
                     Result.Add(bead);
@@ -76,14 +75,14 @@ namespace JewelryMaking.Services
                     Color = entity.Color,
                     Quantity = entity.Quantity,
                     Cost = entity.Cost,
-                    Location = entity.Location,
-                    Source = entity.Source,
+                    //Location = entity.Location,
+                    //Source = entity.Source,
                     Description = entity.Description,
                     //BeadImage = entity.BeadImage
                 };
             }
         }
-        //___________________Edit-Update____________
+        //___________________Put-Update____________
         public bool UpdateBead(BeadEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -98,14 +97,14 @@ namespace JewelryMaking.Services
                 entity.Color = model.Color;
                 entity.Quantity = model.Quantity;
                 entity.Cost = model.Cost;
-                entity.Location = model.Location;
-                entity.Source = model.Source;
+                //entity.Location = model.Location;
+                //entity.Source = model.Source;
                 entity.Description = model.Description;
                 //entity.BeadImage = model.BeadImage;
                 return ctx.SaveChanges() == 1;
             }
         }
-        //___________________Delete____________
+        //___________________Delete_____________________
         public bool DeleteBead(int BeadId)
         {
             using (var ctx = new ApplicationDbContext())

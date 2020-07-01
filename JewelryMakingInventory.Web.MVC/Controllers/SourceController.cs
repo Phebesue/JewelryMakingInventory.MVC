@@ -43,7 +43,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        //GET: Source/Details
+        //GET: Source/Details/{id}
         public ActionResult Details(int id)
         {
             var svc = new SourceService();
@@ -51,7 +51,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        //GET: Source/Edit
+        //GET: Source/Edit/{id}
         public ActionResult Edit(int id)
         {
             var service = new SourceService();
@@ -70,7 +70,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             };
             return View(model);
         }
-        //POST: Source/Edit
+        //POST: Source/Edit/{id}
         [HttpPost]
         public ActionResult Edit(int id, SourceEdit model)
         {
@@ -89,7 +89,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             ModelState.AddModelError("", "Your source could not be updated.");
             return View(model);
         }
-        // GET: Source/Delete
+        // GET: Source/Delete/{id}
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -98,7 +98,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        // POST: Source/Delete
+        // POST: Source/Delete/{id}
         [HttpPost]
         [ActionName("Delete")]
             public ActionResult DeletePost (int id)

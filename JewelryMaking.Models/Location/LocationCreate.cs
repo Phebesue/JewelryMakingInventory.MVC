@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-   public class LocationCreate
+    public class LocationCreate
     {
-        public int LocationId { get; set; }
         [Required]
         public string Kind { get; set; }
         public string Size { get; set; }

@@ -47,9 +47,7 @@ namespace JewelryMaking.Services
                         ShowOrLocation = e.ShowOrLocation,
                     }
                     );
-                //    Result.Add(source);
-                //}
-                //return Result;
+             
                 return query.ToArray();
             }
         }

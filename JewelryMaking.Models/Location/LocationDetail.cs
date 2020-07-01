@@ -9,6 +9,7 @@ namespace JewelryMaking.Models
 {
    public class LocationDetail
     {
+        [Display(Name ="Location ID #")]
         public int LocationId { get; set; }
         [Required]
         public string Kind { get; set; }

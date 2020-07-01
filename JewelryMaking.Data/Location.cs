@@ -11,6 +11,7 @@ namespace JewelryMaking.Data
     public class Location
     {
         [Key]
+        [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
         [Required]
         public string Kind { get; set; }

@@ -17,7 +17,8 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         // GET: Source/Index
         public ActionResult Index()
         {
-            var model = new SourceListAll[0];
+            var sourceService = new SourceService();
+            var model = sourceService.GetSources();
             return View(model);
         }
         //GET: Source/Create
@@ -88,7 +89,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             ModelState.AddModelError("", "Your source could not be updated.");
             return View(model);
         }
-        // GET: Source/ Delete
+        // GET: Source/Delete
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -97,15 +98,21 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
-        // POST: Source Delete
+        // POST: Source/Delete
         [HttpPost]
         [ActionName("Delete")]
             public ActionResult DeletePost (int id)
         {
             var service = new SourceService();
             service.DeleteSource(id);
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your source was deleted";
             return RedirectToAction("Index");
         }
+
+        //private SourceService CreateSourceService()
+        //{
+        //    var sourceService = new SourceService();
+        //    return sourceService;
+        //}
     }
 }

@@ -248,12 +248,16 @@
     <Content Include="Views\Source\Details.cshtml" />
     <Content Include="Views\Source\Edit.cshtml" />
     <Content Include="Views\Source\Delete.cshtml" />
+    <Content Include="Views\Location\Index.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Bead\" />
     <Folder Include="Views\Finding\" />
-    <Folder Include="Views\Location\" />
     <Folder Include="Views\StringingMaterial\" />
   </ItemGroup>
   <ItemGroup>

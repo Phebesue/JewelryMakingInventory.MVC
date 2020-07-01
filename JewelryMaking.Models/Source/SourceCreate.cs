@@ -23,4 +23,3 @@ namespace JewelryMaking.Models
         public string Note { get; set; }
     }
 }
-

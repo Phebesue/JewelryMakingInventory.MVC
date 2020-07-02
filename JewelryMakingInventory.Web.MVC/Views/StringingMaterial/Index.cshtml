@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Stringing Materials Index</h2>
+<h2>Stringing Material Index</h2>
 
 <p>
     @Html.ActionLink("Create New Stringing Material", "Create")
@@ -25,6 +25,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
         </th>
         <th></th>
     </tr>
@@ -47,7 +50,10 @@
             @Html.DisplayFor(modelItem => item.Color)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.StringingMaterialId}) |
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StringingMaterialId }) |
             @Html.ActionLink("Details", "Details", new { id = item.StringingMaterialId }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.StringingMaterialId })
         </td>

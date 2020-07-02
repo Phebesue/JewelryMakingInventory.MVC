@@ -31,7 +31,11 @@ namespace JewelryMaking.Data
         [Required]
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
-        //public virtual Source Source { get; set; }
+        [ForeignKey("Source")]
+        [Required]
+        public int SourceId { get; set; }
+        public virtual Source Source { get; set; }
+
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
         //[Display(Name = "Image")]

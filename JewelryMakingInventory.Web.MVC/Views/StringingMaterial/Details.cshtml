@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Stringing Materials Detail</h2>
+    <h2>Stringing Material Details</h2>
 
 <div>
     <h4>Stringing Material Detail Menu</h4>
@@ -72,6 +72,22 @@
 
         <dd>
             @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SourceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SourceId)
         </dd>
 
     </dl>

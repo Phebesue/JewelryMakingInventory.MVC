@@ -253,21 +253,21 @@
     <Content Include="Views\Location\Edit.cshtml" />
     <Content Include="Views\Location\Create.cshtml" />
     <Content Include="Views\Location\Delete.cshtml" />
-    <Content Include="Views\Finding\Index.cshtml" />
-    <Content Include="Views\Finding\Create.cshtml" />
-    <Content Include="Views\Finding\Details.cshtml" />
-    <Content Include="Views\Finding\Edit.cshtml" />
-    <Content Include="Views\Finding\Delete.cshtml" />
     <Content Include="Views\StringingMaterial\Index.cshtml" />
     <Content Include="Views\StringingMaterial\Create.cshtml" />
     <Content Include="Views\StringingMaterial\Details.cshtml" />
     <Content Include="Views\StringingMaterial\Edit.cshtml" />
     <Content Include="Views\StringingMaterial\Delete.cshtml" />
+    <Content Include="Views\Finding\Create.cshtml" />
+    <Content Include="Views\Finding\Details.cshtml" />
+    <Content Include="Views\Finding\Edit.cshtml" />
+    <Content Include="Views\Finding\Delete.cshtml" />
     <Content Include="Views\Bead\Index.cshtml" />
     <Content Include="Views\Bead\Create.cshtml" />
     <Content Include="Views\Bead\Details.cshtml" />
     <Content Include="Views\Bead\Edit.cshtml" />
     <Content Include="Views\Bead\Delete.cshtml" />
+    <Content Include="Views\Finding\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

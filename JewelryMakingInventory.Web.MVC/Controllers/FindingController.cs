@@ -63,8 +63,8 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Quantity = detail.Quantity,
                 Cost = detail.Cost,
                 Description = detail.Description,
-                //Location = detail.Location,
-                //Source = detail.Source,
+                LocationId = detail.LocationId,
+                SourceId = detail.SourceId,
                 //FindingImage = detail.FindingImage
             };
             return View(model);

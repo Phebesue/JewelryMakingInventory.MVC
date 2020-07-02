@@ -64,7 +64,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Cost = detail.Cost,
                 Description = detail.Description,
                 LocationId = detail.LocationId,
-                //SourceId = detail.SourceId,
+                SourceId = detail.SourceId,
             };
             return View(model);
         }

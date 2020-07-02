@@ -25,7 +25,7 @@ namespace JewelryMaking.Services
                 Cost = model.Cost,
                 Description = model.Description,
                 LocationId = model.LocationId,
-                //Source = model.Source,
+                SourceId = model.SourceId,
                 //BeadImage = model.BeadImage
             };
             using (var ctx = new ApplicationDbContext())
@@ -76,7 +76,7 @@ namespace JewelryMaking.Services
                     Quantity = entity.Quantity,
                     Cost = entity.Cost,
                     LocationId = entity.LocationId,
-                    //Source = entity.Source,
+                    SourceId = entity.SourceId,
                     Description = entity.Description,
                     //BeadImage = entity.BeadImage
                 };
@@ -98,7 +98,7 @@ namespace JewelryMaking.Services
                 entity.Quantity = model.Quantity;
                 entity.Cost = model.Cost;
                 entity.LocationId = model.LocationId;
-                //entity.Source = model.Source;
+                entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
                 //entity.BeadImage = model.BeadImage;
                 return ctx.SaveChanges() == 1;

@@ -22,9 +22,12 @@ namespace JewelryMaking.Models
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
+        [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
-        //public virtual Source Source { get; set; }
+        [Display(Name = "Source ID #")]
+        public int SourceId { get; set; }
         public string Description { get; set; }
+
         //[Display(Name = "Image")]
         //public virtual ImageFile BeadImage { get; set; }
     }

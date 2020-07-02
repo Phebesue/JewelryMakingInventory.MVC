@@ -21,9 +21,9 @@ namespace JewelryMaking.Services
                 Color = model.Color,
                 Length = model.Length,
                 Cost = model.Cost,
-                Description = model.Description
-                //Location = model.Location,
-                //Source = model.Source,
+                Description = model.Description,
+                LocationId = model.LocationId,
+                SourceId = model.SourceId,
                 //StringingImage = model.StringingImage
             };
             using (var ctx = new ApplicationDbContext())
@@ -49,7 +49,7 @@ namespace JewelryMaking.Services
                         Material = e.Material,
                         Size = e.Size,
                         Color = e.Color,
-                        //Location = e.Location,
+                        LocationId = e.LocationId,
                         //StringingImage = e.StringingImage
                     };
                     Result.Add(stringingMaterial);
@@ -73,8 +73,8 @@ namespace JewelryMaking.Services
                     Length = entity.Length,
                     Cost = entity.Cost,
                     Description = entity.Description,
-                    //Location = entity.Location,
-                    //Source = entity.Source,
+                    LocationId = entity.LocationId,
+                    SourceId = entity.SourceId,
                     //StringingImage = entity.StringingImage
                 };
             }
@@ -93,8 +93,8 @@ namespace JewelryMaking.Services
                 entity.Length = model.Length;
                 entity.Cost = model.Cost;
                 entity.Description = model.Description;
-                //entity.Location = model.Location;
-                //entity.Source = model.Source;
+                entity.LocationId = model.LocationId;
+                entity.SourceId = model.SourceId;
                 //entity.StringingImage = model.StringingImage;
 
                 return ctx.SaveChanges() == 1;

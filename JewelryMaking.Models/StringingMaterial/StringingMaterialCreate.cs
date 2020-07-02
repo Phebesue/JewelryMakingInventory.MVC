@@ -25,10 +25,12 @@ namespace JewelryMaking.Models
         public double Cost { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        //[Required]
-        //public virtual Location Location { get; set; }
-        //public virtual Source Source { get; set; }
+        [Display(Name = "Location ID #")]
+        public int LocationId { get; set; }
+        [Display(Name = "Source ID #")]
+        public int SourceId { get; set; }
+
         //[Display(Name = "Image")]
-        //public ImageFile StringingImage { get; set; }
+        //public virtual ImageFile BeadImage { get; set; }
     }
 }

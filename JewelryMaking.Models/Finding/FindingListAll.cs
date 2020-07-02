@@ -23,8 +23,10 @@ namespace JewelryMaking.Models
         //public double Cost { get; set; }
         //public string Description { get; set; }
 
-        //public virtual Location Location { get; set; }
-        //public virtual Source Source { get; set; }
-        //public ImageFile FindingImage { get; set; }
+        [Display(Name = "Location ID #")]
+        public int LocationId { get; set; }
+       
+        //[Display(Name = "Image")]
+        //public virtual ImageFile BeadImage { get; set; }
     }
 }

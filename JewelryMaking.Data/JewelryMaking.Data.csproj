@@ -79,6 +79,10 @@
     <Compile Include="Migrations\202007012157271_CommentOutFkInStringingMaterialBaseClass.designer.cs">
       <DependentUpon>202007012157271_CommentOutFkInStringingMaterialBaseClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.cs" />
+    <Compile Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.designer.cs">
+      <DependentUpon>202007020029136_AttemptToAddLocationIdToBead.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source.cs" />
@@ -100,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007012157271_CommentOutFkInStringingMaterialBaseClass.resx">
       <DependentUpon>202007012157271_CommentOutFkInStringingMaterialBaseClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.resx">
+      <DependentUpon>202007020029136_AttemptToAddLocationIdToBead.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

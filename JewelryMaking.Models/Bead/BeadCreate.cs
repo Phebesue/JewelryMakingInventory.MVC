@@ -28,7 +28,7 @@ namespace JewelryMaking.Models
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
         //[Required]
-        //public virtual Location Location { get; set; }
+        public int LocationId { get; set; }
         //public virtual Source Source { get; set; }
         //[Display(Name = "Image")]
         //public virtual ImageFile BeadImage { get; set; }

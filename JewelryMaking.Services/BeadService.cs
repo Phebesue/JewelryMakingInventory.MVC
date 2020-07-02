@@ -23,8 +23,8 @@ namespace JewelryMaking.Services
                 Color = model.Color,
                 Quantity = model.Quantity,
                 Cost = model.Cost,
-                Description = model.Description
-                //Location = model.Location,
+                Description = model.Description,
+                LocationId = model.LocationId,
                 //Source = model.Source,
                 //BeadImage = model.BeadImage
             };
@@ -50,7 +50,7 @@ namespace JewelryMaking.Services
                         Type = e.Type,
                         Shape = e.Shape,
                         Color = e.Color,
-                        //Location = e.Location,
+                        LocationId = e.LocationId
                         //BeadImage = e.BeadImage
                     };
                     Result.Add(bead);
@@ -75,7 +75,7 @@ namespace JewelryMaking.Services
                     Color = entity.Color,
                     Quantity = entity.Quantity,
                     Cost = entity.Cost,
-                    //Location = entity.Location,
+                    LocationId = entity.LocationId,
                     //Source = entity.Source,
                     Description = entity.Description,
                     //BeadImage = entity.BeadImage
@@ -97,7 +97,7 @@ namespace JewelryMaking.Services
                 entity.Color = model.Color;
                 entity.Quantity = model.Quantity;
                 entity.Cost = model.Cost;
-                //entity.Location = model.Location;
+                entity.LocationId = model.LocationId;
                 //entity.Source = model.Source;
                 entity.Description = model.Description;
                 //entity.BeadImage = model.BeadImage;

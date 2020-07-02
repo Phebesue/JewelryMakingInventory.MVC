@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,8 +26,11 @@ namespace JewelryMaking.Data
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
-        //[Required]
-        //public virtual Location Location { get; set; }
+       
+        [ForeignKey("Location")]
+        [Required]
+        public int LocationId { get; set; }
+        public virtual Location Location { get; set; }
         //public virtual Source Source { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }

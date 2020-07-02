@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details of the Bead</h2>
+<h2>Details</h2>
 
 <div>
-    <h4>Bead Detail</h4>
+    <h4>BeadDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -80,6 +80,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
         </dd>
 
         <dt>

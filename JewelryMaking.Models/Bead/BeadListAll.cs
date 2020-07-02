@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-   public class BeadListAll
+    public class BeadListAll
     {
         [Display(Name = "Bead ID #")]
         public int BeadId { get; set; }
@@ -18,7 +18,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
         //public int Quantity { get; set; }
-        public virtual Location Location { get; set; }
+        public int LocationId { get; set; }
         //[Display(Name = "Image")]
         //public virtual ImageFile BeadImage { get; set; }
     }

@@ -72,9 +72,9 @@ namespace JewelryMaking.Services
                     Color = entity.Color,
                     Length = entity.Length,
                     Cost = entity.Cost,
+                    Description = entity.Description,
                     //Location = entity.Location,
                     //Source = entity.Source,
-                    Description = entity.Description,
                     //StringingImage = entity.StringingImage
                 };
             }
@@ -92,9 +92,9 @@ namespace JewelryMaking.Services
                 entity.Color = model.Color;
                 entity.Length = model.Length;
                 entity.Cost = model.Cost;
+                entity.Description = model.Description;
                 //entity.Location = model.Location;
                 //entity.Source = model.Source;
-                entity.Description = model.Description;
                 //entity.StringingImage = model.StringingImage;
 
                 return ctx.SaveChanges() == 1;

@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Bead Index</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,6 +22,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationId)
         </th>
         <th></th>
     </tr>
@@ -41,7 +44,10 @@
             @Html.DisplayFor(modelItem => item.Color)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {  id=item.BeadId}) |
+            @Html.DisplayFor(modelItem => item.LocationId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BeadId}) |
             @Html.ActionLink("Details", "Details", new { id = item.BeadId }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.BeadId })
         </td>

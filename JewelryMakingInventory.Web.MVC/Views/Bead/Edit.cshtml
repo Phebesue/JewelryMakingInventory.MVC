@@ -3,14 +3,29 @@
 @{
     ViewBag.Title = "Edit";
 }
+<style>
+    body {
+        background-image: url('../../Content/Assets/beads2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-    <h2>Edit a Bead</h2>
+    .body-content {
+        background-color: white;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
+
+<h2>Edit a Bead</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Bead Edit Menu</h4>
         <hr />

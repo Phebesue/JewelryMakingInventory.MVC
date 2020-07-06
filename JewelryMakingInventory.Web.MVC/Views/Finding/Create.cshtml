@@ -4,13 +4,30 @@
     ViewBag.Title = "Create";
 }
 
-    <h2>Create a Finding</h2>
+<style>
+
+    body {
+        background-image: url('../../Content/Assets/findings.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .body-content {
+        background-color: white;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
+
+<h2>Create a Finding</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Finding Create Menu</h4>
         <hr />

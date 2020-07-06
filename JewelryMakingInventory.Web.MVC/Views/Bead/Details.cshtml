@@ -3,8 +3,23 @@
 @{
     ViewBag.Title = "Details";
 }
+<style>
+    body {
+        background-image: url('../../Content/Assets/beads2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-    <h2>Bead Detail</h2>
+    .body-content {
+        background-color: white;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
+
+<h2>Bead Detail</h2>
 
 <div>
     <h4>Bead Detail Menu</h4>
@@ -109,6 +124,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BeadId}) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BeadId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

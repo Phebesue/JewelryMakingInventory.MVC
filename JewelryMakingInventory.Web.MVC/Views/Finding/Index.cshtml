@@ -3,6 +3,22 @@
 @{
     ViewBag.Title = "Index";
 }
+<style>
+
+    body {
+        background-image: url('../../Content/Assets/findings.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .body-content {
+        background-color: white;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
 
 <h2>Index of Findings</h2>
 
@@ -32,32 +48,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FindingId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SubType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LocationId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FindingId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.FindingId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.FindingId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FindingId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FindingId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FindingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FindingId })
+            </td>
+        </tr>
+    }
 
 </table>

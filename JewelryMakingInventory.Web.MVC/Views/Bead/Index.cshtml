@@ -3,7 +3,21 @@
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    body {
+        background-image: url('../../Content/Assets/beads2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
+    .body-content {
+        background-color: white;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
 <h2>Bead Index</h2>
 
 <p>
@@ -29,29 +43,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BeadId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shape)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LocationId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BeadId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.BeadId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.BeadId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeadId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shape)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BeadId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BeadId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BeadId })
+            </td>
+        </tr>
+    }
 
 </table>

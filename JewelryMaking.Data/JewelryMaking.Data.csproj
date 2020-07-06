@@ -63,29 +63,9 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="File\ImageFile.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Migrations\202006302126285_InitialCreate.cs" />
-    <Compile Include="Migrations\202006302126285_InitialCreate.designer.cs">
-      <DependentUpon>202006302126285_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007012008587_InitialMigration.cs" />
-    <Compile Include="Migrations\202007012008587_InitialMigration.designer.cs">
-      <DependentUpon>202007012008587_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007012055258_CommentedOutReferencesToFk.cs" />
-    <Compile Include="Migrations\202007012055258_CommentedOutReferencesToFk.designer.cs">
-      <DependentUpon>202007012055258_CommentedOutReferencesToFk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007012157271_CommentOutFkInStringingMaterialBaseClass.cs" />
-    <Compile Include="Migrations\202007012157271_CommentOutFkInStringingMaterialBaseClass.designer.cs">
-      <DependentUpon>202007012157271_CommentOutFkInStringingMaterialBaseClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.cs" />
-    <Compile Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.designer.cs">
-      <DependentUpon>202007020029136_AttemptToAddLocationIdToBead.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007020138000_AttemptToAddLocationIdToFindingSM.cs" />
-    <Compile Include="Migrations\202007020138000_AttemptToAddLocationIdToFindingSM.designer.cs">
-      <DependentUpon>202007020138000_AttemptToAddLocationIdToFindingSM.cs</DependentUpon>
+    <Compile Include="Migrations\202007062200306_NewInitialMigration.cs" />
+    <Compile Include="Migrations\202007062200306_NewInitialMigration.designer.cs">
+      <DependentUpon>202007062200306_NewInitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,23 +77,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006302126285_InitialCreate.resx">
-      <DependentUpon>202006302126285_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007012008587_InitialMigration.resx">
-      <DependentUpon>202007012008587_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007012055258_CommentedOutReferencesToFk.resx">
-      <DependentUpon>202007012055258_CommentedOutReferencesToFk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007012157271_CommentOutFkInStringingMaterialBaseClass.resx">
-      <DependentUpon>202007012157271_CommentOutFkInStringingMaterialBaseClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007020029136_AttemptToAddLocationIdToBead.resx">
-      <DependentUpon>202007020029136_AttemptToAddLocationIdToBead.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007020138000_AttemptToAddLocationIdToFindingSM.resx">
-      <DependentUpon>202007020138000_AttemptToAddLocationIdToFindingSM.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007062200306_NewInitialMigration.resx">
+      <DependentUpon>202007062200306_NewInitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

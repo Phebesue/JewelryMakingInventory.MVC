@@ -7,13 +7,13 @@ namespace JewelryMaking.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AttemptToAddLocationIdToFindingSM : IMigrationMetadata
+    public sealed partial class NewInitialMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AttemptToAddLocationIdToFindingSM));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NewInitialMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007020138000_AttemptToAddLocationIdToFindingSM"; }
+            get { return "202007062200306_NewInitialMigration"; }
         }
         
         string IMigrationMetadata.Source

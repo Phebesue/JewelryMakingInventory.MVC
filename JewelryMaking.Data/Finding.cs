@@ -30,7 +30,7 @@ namespace JewelryMaking.Data
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         [ForeignKey("Source")]
-        [Required]
+        //[Required]
         public int SourceId { get; set; }
         public virtual Source Source { get; set; }
 

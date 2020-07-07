@@ -1,21 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<style>
-    body {
-        background-image: url('../../Content/Assets/bead-1.jpg');
-        background-size: cover; 
-        background-repeat: no-repeat;
-    }
+    <style>
+        body {
+            background-image: url('../../Content/Assets/bead-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-   .body-content {
-        background-color: white;
-        border-bottom: 5px solid black;
-        border-left: 5px solid black;
-        border-right: 5px solid black;
-        border-radius: 0px 0px 15px 15px;
-    }
-</style>
+        .body-content {
+            background-color: rgba(128, 128, 128, 0.70);
+            min-width: 800px;
+            max-width: 970px;
+            border-bottom: 5px solid black;
+            border-left: 5px solid black;
+            border-right: 5px solid black;
+            border-radius: 0px 0px 15px 15px;
+        }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My Jewelry Materials Inventory</title>
@@ -43,13 +45,14 @@
                     <li>@Html.ActionLink("Stringing Material", "Index", "StringingMaterial")</li>
                     <li>@Html.ActionLink("Findings", "Index", "Finding")</li>
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
     <div class="container body-content">
+
         @RenderBody()
         <hr />
         <footer>

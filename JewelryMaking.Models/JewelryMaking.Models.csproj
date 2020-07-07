@@ -59,6 +59,7 @@
     <Compile Include="Finding\FindingDetail.cs" />
     <Compile Include="Finding\FindingEdit.cs" />
     <Compile Include="Finding\FindingListAll.cs" />
+    <Compile Include="ImageDbContext.cs" />
     <Compile Include="Location\LocationCreate.cs" />
     <Compile Include="Location\LocationDetail.cs" />
     <Compile Include="Location\LocationEdit.cs" />

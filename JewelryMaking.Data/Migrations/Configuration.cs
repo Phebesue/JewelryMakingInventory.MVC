@@ -51,7 +51,7 @@
                 );
 
             context.Beads.AddOrUpdate(x => x.BeadId,
-                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1 },
                 new Bead() { BeadId = 2, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Blue & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 3, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Red & Yellow", Quantity = 5, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 4, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black, Gray & White", Quantity = 3, Description = "Monet", Cost = 2.75, LocationId = 1, SourceId = 5 },

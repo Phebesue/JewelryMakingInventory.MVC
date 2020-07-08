@@ -57,7 +57,7 @@
                 new Bead() { BeadId = 4, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black, Gray & White", Quantity = 3, Description = "Monet", Cost = 2.75, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 5, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Wavy", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 6, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Dots", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 7, Brand = "", Type = "", Shape = "Round", Size = "12mm", Color = "White ", Quantity = 3, Description = "Opalescent", Cost = 2, LocationId = 7 },
+                new Bead() { BeadId = 7, Brand = "", Type = "", Shape = "Round", Size = "12mm", Color = "White ", Quantity = 3, Description = "Opalescent", Cost = 0.0, LocationId = 7 },
                 new Bead() { BeadId = 8, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Blue", Quantity = 33, Description = "", Cost = 1, LocationId = 8, SourceId = 11 },
                 new Bead() { BeadId = 9, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Aqua", Quantity = 100, Description = "", Cost = 1, LocationId = 8, SourceId = 11 }
                 );

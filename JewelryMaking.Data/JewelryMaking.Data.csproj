@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +71,10 @@
     <Compile Include="Migrations\202007081758373_SourceNotRequired.designer.cs">
       <DependentUpon>202007081758373_SourceNotRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.cs" />
+    <Compile Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.designer.cs">
+      <DependentUpon>202007081904396_AbandonImageForNowWorkOnSubtotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source.cs" />
@@ -85,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007081758373_SourceNotRequired.resx">
       <DependentUpon>202007081758373_SourceNotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.resx">
+      <DependentUpon>202007081904396_AbandonImageForNowWorkOnSubtotal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

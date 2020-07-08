@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web;
 
 namespace JewelryMaking.Data
 {
@@ -37,9 +37,9 @@ namespace JewelryMaking.Data
 
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        [ForeignKey("File")]
-        [Display(Name = "Image")]
-        public int? FileId { get; set; }
-        public virtual File File { get; set; }
+
+        //[Display(Name = "File")]
+        //[DataType(DataType.Upload)]
+        //public HttpPostedFileBase File { get; set; }
     }
 }

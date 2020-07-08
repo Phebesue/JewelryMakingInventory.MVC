@@ -26,7 +26,7 @@ namespace JewelryMaking.Services
                 Description = model.Description,
                 LocationId = model.LocationId,
                 SourceId = model.SourceId,
-                File = model.File
+                //  File = model.File
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -40,8 +40,7 @@ namespace JewelryMaking.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.Beads.ToList();
-                List<BeadListAll> Result = new
-                List<BeadListAll>();
+                List<BeadListAll> Result = new List<BeadListAll>();
                 foreach (Bead e in query)
                 {
                     BeadListAll bead = new BeadListAll
@@ -50,6 +49,7 @@ namespace JewelryMaking.Services
                         Type = e.Type,
                         Shape = e.Shape,
                         Color = e.Color,
+                        Cost = e.Cost,
                         LocationId = e.LocationId
                         //File = e.File
                     };
@@ -78,7 +78,7 @@ namespace JewelryMaking.Services
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,
-                    File = entity.File
+                    //File = entity.File
                 };
             }
         }
@@ -100,7 +100,7 @@ namespace JewelryMaking.Services
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
-                entity.File = model.File;
+                //entity.File = model.File;
                 return ctx.SaveChanges() == 1;
             }
         }

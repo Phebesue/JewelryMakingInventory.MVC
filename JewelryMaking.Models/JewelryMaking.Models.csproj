@@ -51,10 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bead\BeadSubTotal.cs" />
     <Compile Include="Bead\BeadCreate.cs" />
     <Compile Include="Bead\BeadDetail.cs" />
     <Compile Include="Bead\BeadEdit.cs" />
     <Compile Include="Bead\BeadListAll.cs" />
+    <Compile Include="Finding\FindingSubTotal.cs" />
     <Compile Include="Finding\FindingCreate.cs" />
     <Compile Include="Finding\FindingDetail.cs" />
     <Compile Include="Finding\FindingEdit.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="Source\SourceDetail.cs" />
     <Compile Include="Source\SourceEdit.cs" />
     <Compile Include="Source\SourceListAll.cs" />
+    <Compile Include="StringingMaterial\StringingMaterialSubTotal.cs" />
     <Compile Include="StringingMaterial\StringingMaterialCreate.cs" />
     <Compile Include="StringingMaterial\StringingMaterialDetail.cs" />
     <Compile Include="StringingMaterial\StringingMaterialEdit.cs" />

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web;
 
 namespace JewelryMaking.Data
 {
@@ -26,19 +26,31 @@ namespace JewelryMaking.Data
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
-       
+
         [ForeignKey("Location")]
         [Required]
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         [ForeignKey("Source")]
-        //[Required]
-        public int SourceId { get; set; }
+        public int? SourceId { get; set; }
         public virtual Source Source { get; set; }
 
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        public double SubTotal
+        {
+            get
+            {
+                if (Quantity == 0)
+                {
+                    return 0;
+                }
+                return (Quantity * Cost);
+            }
+        }
+
+        //[Display(Name = "File")]
+        //[DataType(DataType.Upload)]
+        //public HttpPostedFileBase File { get; set; }
     }
 }

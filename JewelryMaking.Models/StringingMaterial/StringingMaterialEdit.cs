@@ -30,7 +30,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
         [Display(Name = "Source ID #")]
-        public int SourceId { get; set; }
+        public int? SourceId { get; set; }
 
         //[Display(Name = "Image")]
         //public virtual ImageFile BeadImage { get; set; }

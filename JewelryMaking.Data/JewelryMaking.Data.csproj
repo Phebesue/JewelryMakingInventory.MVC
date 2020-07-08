@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,11 +62,30 @@
     <Compile Include="File\File.cs" />
     <Compile Include="Finding.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="File\ImageFile.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Migrations\202007062200306_NewInitialMigration.cs" />
     <Compile Include="Migrations\202007062200306_NewInitialMigration.designer.cs">
       <DependentUpon>202007062200306_NewInitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007081758373_SourceNotRequired.cs" />
+    <Compile Include="Migrations\202007081758373_SourceNotRequired.designer.cs">
+      <DependentUpon>202007081758373_SourceNotRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.cs" />
+    <Compile Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.designer.cs">
+      <DependentUpon>202007081904396_AbandonImageForNowWorkOnSubtotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007082006438_RemoveLocationFromSubTotal.cs" />
+    <Compile Include="Migrations\202007082006438_RemoveLocationFromSubTotal.designer.cs">
+      <DependentUpon>202007082006438_RemoveLocationFromSubTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007082030383_AddSubTotalToBead.cs" />
+    <Compile Include="Migrations\202007082030383_AddSubTotalToBead.designer.cs">
+      <DependentUpon>202007082030383_AddSubTotalToBead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007082102414_AddSubTotalToFindingStringingMaterials.cs" />
+    <Compile Include="Migrations\202007082102414_AddSubTotalToFindingStringingMaterials.designer.cs">
+      <DependentUpon>202007082102414_AddSubTotalToFindingStringingMaterials.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +99,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202007062200306_NewInitialMigration.resx">
       <DependentUpon>202007062200306_NewInitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081758373_SourceNotRequired.resx">
+      <DependentUpon>202007081758373_SourceNotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081904396_AbandonImageForNowWorkOnSubtotal.resx">
+      <DependentUpon>202007081904396_AbandonImageForNowWorkOnSubtotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007082006438_RemoveLocationFromSubTotal.resx">
+      <DependentUpon>202007082006438_RemoveLocationFromSubTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007082030383_AddSubTotalToBead.resx">
+      <DependentUpon>202007082030383_AddSubTotalToBead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007082102414_AddSubTotalToFindingStringingMaterials.resx">
+      <DependentUpon>202007082102414_AddSubTotalToFindingStringingMaterials.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

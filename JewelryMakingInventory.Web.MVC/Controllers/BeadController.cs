@@ -16,7 +16,15 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             var model = beadService.GetBeads();
             return View(model);
         }
-
+        // GET: Bead/Index/Subtotal
+        [Route("Bead/Index/Subtotal")]
+        
+        public ActionResult IndexTotal()
+        {
+            var beadService = new BeadService();
+            var model = beadService.GetBeadSubTotal();
+            return View(model);
+        }
         //GET: Bead/Create
         public ActionResult Create()
         {

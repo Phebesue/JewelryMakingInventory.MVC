@@ -14,10 +14,8 @@ namespace JewelryMaking.Models
         public int BeadId { get; set; }
         public string Type { get; set; }
         public string Shape { get; set; }
-        //public string Size { get; set; }
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
-        //public int Quantity { get; set; }
         public int LocationId { get; set; }
         //[Display(Name = "Image")]
         //public virtual ImageFile BeadImage { get; set; }

@@ -51,13 +51,13 @@
                 );
 
             context.Beads.AddOrUpdate(x => x.BeadId,
-                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1 },
+                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 2, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Blue & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 3, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Red & Yellow", Quantity = 5, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 4, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black, Gray & White", Quantity = 3, Description = "Monet", Cost = 2.75, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 5, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Wavy", Cost = 3.5, LocationId = 1, SourceId = 5 },
                 new Bead() { BeadId = 6, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Dots", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 7, Brand = "Kazuri", Type = "Clay", Shape = "Round", Size = "10 - 12mm", Color = "Namib Yellow", Quantity = 3, Description = "Solid", Cost = 2, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 7, Brand = "", Type = "", Shape = "Round", Size = "12mm", Color = "White ", Quantity = 3, Description = "Opalescent", Cost = 0.0, LocationId = 7 },
                 new Bead() { BeadId = 8, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Blue", Quantity = 33, Description = "", Cost = 1, LocationId = 8, SourceId = 11 },
                 new Bead() { BeadId = 9, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Aqua", Quantity = 100, Description = "", Cost = 1, LocationId = 8, SourceId = 11 }
                 );

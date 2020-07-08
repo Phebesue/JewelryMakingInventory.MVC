@@ -195,7 +195,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
@@ -262,12 +262,15 @@
     <Content Include="Views\Finding\Details.cshtml" />
     <Content Include="Views\Finding\Edit.cshtml" />
     <Content Include="Views\Finding\Delete.cshtml" />
-    <Content Include="Views\Bead\Index.cshtml" />
-    <Content Include="Views\Bead\Create.cshtml" />
     <Content Include="Views\Bead\Details.cshtml" />
     <Content Include="Views\Bead\Edit.cshtml" />
     <Content Include="Views\Bead\Delete.cshtml" />
     <Content Include="Views\Finding\Index.cshtml" />
+    <Content Include="Views\Bead\Create.cshtml" />
+    <Content Include="Views\Bead\Index.cshtml" />
+    <Content Include="Views\Bead\IndexTotal.cshtml" />
+    <Content Include="Views\StringingMaterial\IndexTotal.cshtml" />
+    <Content Include="Views\Finding\IndexTotal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

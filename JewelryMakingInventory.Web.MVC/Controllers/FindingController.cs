@@ -18,6 +18,15 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
+        // GET: Finding/Index/SubTotal
+        [Route("Finding/Index/Subtotal")]
+        public ActionResult IndexTotal()
+        {
+            var findingService = new FindingService();
+            var model = findingService.GetFindingSubTotal();
+
+            return View(model);
+        }
 
         //GET: Finding/Create
         public ActionResult Create()

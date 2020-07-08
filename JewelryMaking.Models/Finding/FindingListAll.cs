@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-   public class FindingListAll
+    public class FindingListAll
     {
-        [Display(Name = "Finding ID #")] 
+        [Display(Name = "Finding ID #")]
         public int FindingId { get; set; }
         public string Category { get; set; }
         public string SubType { get; set; }
@@ -19,14 +19,5 @@ namespace JewelryMaking.Models
         public string Color { get; set; }
         //public string Association { get; set; }
         public int Quantity { get; set; }
-        //[Display(Name = "Cost per Item")]
-        //public double Cost { get; set; }
-        //public string Description { get; set; }
-
-        [Display(Name = "Location ID #")]
-        public int LocationId { get; set; }
-       
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
     }
 }

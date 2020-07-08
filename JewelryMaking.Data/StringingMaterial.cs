@@ -24,16 +24,26 @@ namespace JewelryMaking.Data
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
         public double Cost { get; set; }
-        [MaxLength(8000, ErrorMessage = "Too Long.")]
-        public string Description { get; set; }
-        [ForeignKey("Location")]
         [Required]
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         [ForeignKey("Source")]
-        //[Required]
-        public int SourceId { get; set; }
+        public int? SourceId { get; set; }
         public virtual Source Source { get; set; }
+        [MaxLength(8000, ErrorMessage = "Too Long.")]
+        public string Description { get; set; }
+        [ForeignKey("Location")]
+        public double SubTotal
+        {
+            get
+            {
+                if (Length == 0)
+                {
+                    return 0;
+                }
+                return (Length * Cost);
+            }
+        }
         //[Display(Name = "Image")]
         //public ImageFile StringingImage { get; set; }
     }

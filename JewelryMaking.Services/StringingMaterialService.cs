@@ -57,6 +57,32 @@ namespace JewelryMaking.Services
                 return Result;
             }
         }
+        //___________________Get-Read SubTotal___________________________
+        public IEnumerable<StringingMaterialSubTotal> GetStringingMaterialSubTotal()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.StringingMaterials.ToList();
+                List<StringingMaterialSubTotal> Result = new
+                List<StringingMaterialSubTotal>();
+                foreach (StringingMaterial e in query)
+                {
+                    StringingMaterialSubTotal stringingMaterial = new StringingMaterialSubTotal
+                    {
+                        StringingMaterialId = e.StringingMaterialId,
+                        Type = e.Type,
+                        Material = e.Material,
+                        Size = e.Size,
+                        Color = e.Color,
+                        Length = e.Length,
+                        Cost = e.Cost,
+                        SubTotal = e.SubTotal
+                    };
+                    Result.Add(stringingMaterial);
+                }
+                return Result;
+            }
+        }
         //___________________Get-By Id____________
         public StringingMaterialDetail GetStringingMaterialById(int stringingMaterialId)
         {

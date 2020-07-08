@@ -1,0 +1,83 @@
+﻿@model IEnumerable<JewelryMaking.Models.BeadSubTotal>
+
+@{
+    ViewBag.Title = "IndexTotal";
+}
+<style>
+    body {
+        background-image: url('../../Content/Assets/kazuri10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .body-content {
+        background-color: lavender;
+        min-width: 800px;
+        max-width: 950px;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+        border-radius: 0px 0px 15px 15px;
+    }
+</style>
+<h2>Bead Total</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BeadId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shape)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTotal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeadId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shape)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTotal)
+            </td>
+            
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

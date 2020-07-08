@@ -18,7 +18,15 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
 
             return View(model);
         }
+        // GET: StringingMaterial/Index/SubTotal
+        [Route("StringingMaterial/Index/Subtotal")]
+        public ActionResult IndexTotal()
+        {
+            var locationService = new StringingMaterialService();
+            var model = locationService.GetStringingMaterialSubTotal();
 
+            return View(model);
+        }
         //GET: StringingMaterial/Create
         public ActionResult Create()
         {
@@ -65,7 +73,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Description = detail.Description,
                 LocationId = detail.LocationId,
                 SourceId = detail.SourceId,
-                //StringingMaterialImage = detail.StringingMaterialImage
+                //StringingImage = detail.StringingImage
             };
             return View(model);
         }

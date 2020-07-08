@@ -49,8 +49,33 @@ namespace JewelryMaking.Services
                         Type = e.Type,
                         Shape = e.Shape,
                         Color = e.Color,
-                        Cost = e.Cost,
                         LocationId = e.LocationId
+                        //File = e.File
+                    };
+                    Result.Add(bead);
+                }
+                return Result;
+            }
+        }
+        //___________________Get-Read SubTotal____________
+        public IEnumerable<BeadSubTotal> GetBeadSubTotal()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Beads.ToList();
+                List<BeadSubTotal> Result = new List<BeadSubTotal>();
+                foreach (Bead e in query)
+                {
+                    BeadSubTotal bead = new BeadSubTotal
+                    {
+                        BeadId = e.BeadId,
+                        Type = e.Type,
+                        Shape = e.Shape,
+                        Color = e.Color,
+                        Quantity = e.Quantity,
+                        Cost = e.Cost,
+                        SubTotal = e.SubTotal,
+                        //LocationId = e.LocationId
                         //File = e.File
                     };
                     Result.Add(bead);

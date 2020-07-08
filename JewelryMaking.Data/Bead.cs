@@ -37,6 +37,17 @@ namespace JewelryMaking.Data
 
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
+        public double SubTotal
+        {
+            get
+            {
+                if (Quantity == 0)
+                {
+                    return 0;
+                }
+                return (Quantity * Cost);
+            }
+        }
 
         //[Display(Name = "File")]
         //[DataType(DataType.Upload)]

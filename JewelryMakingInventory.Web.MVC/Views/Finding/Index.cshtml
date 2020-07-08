@@ -27,6 +27,9 @@
 <p>
     @Html.ActionLink("Create New Finding", "Create")
 </p>
+<p>
+    @Html.ActionLink("SubTotal Findings", "IndexTotal")
+</p>
 <table class="table">
     <tr>
         <th>
@@ -43,9 +46,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LocationId)
         </th>
         <th></th>
     </tr>
@@ -67,9 +67,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LocationId)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.FindingId }) |

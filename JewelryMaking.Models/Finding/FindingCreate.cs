@@ -26,7 +26,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
         [Display(Name = "Source ID #")]
-        public int SourceId { get; set; }
+        public int? SourceId { get; set; }
         //public ImageFile FindingImage { get; set; }
     }
 }

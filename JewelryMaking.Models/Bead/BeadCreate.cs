@@ -32,7 +32,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Source ID #")]
         public int SourceId { get; set; }
 
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        [Display(Name = "Image")]
+        public virtual File File { get; set; }
     }
 }

@@ -61,7 +61,6 @@
     <Compile Include="File\File.cs" />
     <Compile Include="Finding.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="File\ImageFile.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Migrations\202007062200306_NewInitialMigration.cs" />
     <Compile Include="Migrations\202007062200306_NewInitialMigration.designer.cs">

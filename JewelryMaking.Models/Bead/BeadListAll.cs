@@ -13,8 +13,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Bead ID #")]
         public int BeadId { get; set; }
         public string Type { get; set; }
-        public string Shape { get; set; }
-        //public string Size { get; set; }
+        public string Shape { get; set; }     
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
         //public int Quantity { get; set; }

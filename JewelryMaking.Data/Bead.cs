@@ -26,19 +26,20 @@ namespace JewelryMaking.Data
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
-       
+
         [ForeignKey("Location")]
         [Required]
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
         [ForeignKey("Source")]
-        //[Required]
-        public int SourceId { get; set; }
+        public int? SourceId { get; set; }
         public virtual Source Source { get; set; }
 
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        [ForeignKey("File")]
+        [Display(Name = "Image")]
+        public int? FileId { get; set; }
+        public virtual File File { get; set; }
     }
 }

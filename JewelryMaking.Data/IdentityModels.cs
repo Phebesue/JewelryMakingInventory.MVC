@@ -31,7 +31,7 @@ namespace JewelryMaking.Data
         {
             return new ApplicationDbContext();
         }
-        //public DbSet<File> Files { get; set; }
+        public DbSet<File> Files { get; set; }
         //public DbSet<ImageFile> ImageFiles { get; set; }
         public DbSet<Source> Sources { get; set; }
         public DbSet<Location> Locations { get; set; }

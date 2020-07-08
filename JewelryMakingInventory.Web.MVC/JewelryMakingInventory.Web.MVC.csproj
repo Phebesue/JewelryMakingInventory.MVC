@@ -263,11 +263,11 @@
     <Content Include="Views\Finding\Edit.cshtml" />
     <Content Include="Views\Finding\Delete.cshtml" />
     <Content Include="Views\Bead\Index.cshtml" />
-    <Content Include="Views\Bead\Create.cshtml" />
     <Content Include="Views\Bead\Details.cshtml" />
     <Content Include="Views\Bead\Edit.cshtml" />
     <Content Include="Views\Bead\Delete.cshtml" />
     <Content Include="Views\Finding\Index.cshtml" />
+    <Content Include="Views\Bead\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

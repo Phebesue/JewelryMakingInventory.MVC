@@ -23,8 +23,6 @@ namespace JewelryMaking.Data
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
         public double Cost { get; set; }
-        [MaxLength(8000, ErrorMessage = "Too Long.")]
-        public string Description { get; set; }
         [ForeignKey("Location")]
         [Required]
         public int LocationId { get; set; }
@@ -33,6 +31,19 @@ namespace JewelryMaking.Data
 
         public int? SourceId { get; set; }
         public virtual Source Source { get; set; }
+        [MaxLength(8000, ErrorMessage = "Too Long.")]
+        public string Description { get; set; }
+        public double SubTotal
+        {
+            get
+            {
+                if (Quantity == 0)
+                {
+                    return 0;
+                }
+                return (Quantity * Cost);
+            }
+        }
 
         //[Display(Name = "Image")]
         //public ImageFile FindingImage { get; set; }

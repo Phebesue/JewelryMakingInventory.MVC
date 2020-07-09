@@ -1,0 +1,81 @@
+﻿@model IEnumerable<JewelryMaking.Models.FindingSubTotal>
+
+@{
+    ViewBag.Title = "IndexTotal";
+}
+    <style>
+
+        body {
+            background-image: url('../../Content/Assets/finding12.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .body-content {
+            background-color: white;
+            min-width: 800px;
+            max-width: 970px;
+            border-bottom: 5px solid black;
+            border-left: 5px solid black;
+            border-right: 5px solid black;
+            border-radius: 0px 0px 15px 15px;
+        }
+    </style>
+<h2>Finding Total</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FindingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTotal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FindingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubTotal)
+        </td>
+    </tr>
+}
+
+</table>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

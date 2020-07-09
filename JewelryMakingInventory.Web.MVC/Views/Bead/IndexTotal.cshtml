@@ -1,51 +1,50 @@
-﻿@model IEnumerable<JewelryMaking.Models.FindingListAll>
+﻿@model IEnumerable<JewelryMaking.Models.BeadSubTotal>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "IndexTotal";
 }
 <style>
-
     body {
-        background-image: url('../../Content/Assets/finding9.jpg');
+        background-image: url('../../Content/Assets/kazuri10.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .body-content {
-        background-color: white;
+        background-color: lavender;
         min-width: 800px;
-        max-width: 970px;
+        max-width: 950px;
         border-bottom: 5px solid black;
         border-left: 5px solid black;
         border-right: 5px solid black;
         border-radius: 0px 0px 15px 15px;
     }
 </style>
+<h2>Bead Total</h2>
 
-<h2>Index of Findings</h2>
 
-<p>
-    @Html.ActionLink("Create New Finding", "Create")
-</p>
-<p>
-    @Html.ActionLink("SubTotal Findings", "IndexTotal")
-</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FindingId)
+            @Html.DisplayNameFor(model => model.BeadId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.Type)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SubType)
+            @Html.DisplayNameFor(model => model.Shape)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTotal)
         </th>
         <th></th>
     </tr>
@@ -54,13 +53,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FindingId)
+                @Html.DisplayFor(modelItem => item.BeadId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
+                @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SubType)
+                @Html.DisplayFor(modelItem => item.Shape)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Color)
@@ -69,11 +68,16 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.FindingId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.FindingId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.FindingId })
+                @Html.DisplayFor(modelItem => item.Cost)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubTotal)
+            </td>
+            
         </tr>
     }
 
 </table>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

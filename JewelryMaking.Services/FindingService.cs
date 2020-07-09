@@ -42,17 +42,40 @@ namespace JewelryMaking.Services
                 List<FindingListAll>();
                 foreach (Finding e in query)
                 {
-                    FindingListAll bead = new FindingListAll
+                    FindingListAll finding = new FindingListAll
                     {
                         FindingId = e.FindingId,
                         Category = e.Category,
                         SubType = e.SubType,
                         Color = e.Color,
                         Quantity = e.Quantity,
-                        LocationId = e.LocationId,
-                        //FindingImage = e.FindingImage
                     };
-                    Result.Add(bead);
+                    Result.Add(finding);
+                }
+                return Result;
+            }
+        }
+        //___________________Get-Read SubTotal____________
+        public IEnumerable<FindingSubTotal> GetFindingSubTotal()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Findings.ToList();
+                List<FindingSubTotal> Result = new
+                List<FindingSubTotal>();
+                foreach (Finding e in query)
+                {
+                    FindingSubTotal finding = new FindingSubTotal
+                    {
+                        FindingId = e.FindingId,
+                        Category = e.Category,
+                        SubType = e.SubType,
+                        Color = e.Color,
+                        Quantity = e.Quantity,
+                        Cost = e.Cost,
+                        SubTotal = e.SubTotal
+                    };
+                    Result.Add(finding);
                 }
                 return Result;
             }

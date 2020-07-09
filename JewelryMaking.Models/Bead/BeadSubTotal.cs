@@ -1,5 +1,4 @@
-﻿using JewelryMaking.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
-    public class BeadListAll
+    public class BeadSubTotal
     {
         [Display(Name = "Bead ID #")]
         public int BeadId { get; set; }
@@ -16,8 +15,8 @@ namespace JewelryMaking.Models
         public string Shape { get; set; }
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
-        public int LocationId { get; set; }
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        public int Quantity { get; set; }
+        public double Cost { get; set; }
+        public double SubTotal { get; set; }
     }
 }

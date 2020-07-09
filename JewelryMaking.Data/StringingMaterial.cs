@@ -23,6 +23,7 @@ namespace JewelryMaking.Data
         [Display(Name = "Length in Inches")]
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
         [Required]
         public int LocationId { get; set; }
@@ -33,6 +34,7 @@ namespace JewelryMaking.Data
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
         [ForeignKey("Location")]
+        [DataType(DataType.Currency)]
         public double SubTotal
         {
             get

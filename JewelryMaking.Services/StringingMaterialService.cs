@@ -98,6 +98,7 @@ namespace JewelryMaking.Services
                     Color = entity.Color,
                     Length = entity.Length,
                     Cost = entity.Cost,
+                    SubTotal = entity.SubTotal,
                     Description = entity.Description,
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,

@@ -63,8 +63,8 @@
                 );
 
             context.StringingMaterials.AddOrUpdate(x => x.StringingMaterialId,
-                new StringingMaterial() { StringingMaterialId = 1, Type = "Cord", Material = "Leather", Size = 2, Color = "Black", Length = 1800, Cost = 0.13, Description = "", LocationId = 14, SourceId = 1 },
-                new StringingMaterial() { StringingMaterialId = 2, Type = "Cord", Material = "Leather", Size = 2, Color = "Brown", Length = 1800, Cost = 0.13, Description = "", LocationId = 14, SourceId = 1 },
+                new StringingMaterial() { StringingMaterialId = 1, Type = "Cord", Material = "Leather", Size = 2, Color = "Black", Length = 1800, Cost = 0.03, Description = "", LocationId = 14, SourceId = 1 },
+                new StringingMaterial() { StringingMaterialId = 2, Type = "Cord", Material = "Leather", Size = 2, Color = "Brown", Length = 1800, Cost = 0.03, Description = "", LocationId = 14, SourceId = 1 },
                 new StringingMaterial() { StringingMaterialId = 3, Type = "Cord", Material = "Leather", Size = 2, Color = "Navy", Length = 180, Cost = 0.25, Description = "Weathered", LocationId = 14, SourceId = 8 },
                 new StringingMaterial() { StringingMaterialId = 4, Type = "Cord", Material = "Leather", Size = 5, Color = "Black", Length = 120, Cost = 0.35, Description = "polished", LocationId = 14, SourceId = 8 },
                 new StringingMaterial() { StringingMaterialId = 5, Type = "Cord", Material = "Leather", Size = 5, Color = "Aqua", Length = 24, Cost = 0.35, Description = "metallic", LocationId = 14, SourceId = 8 }

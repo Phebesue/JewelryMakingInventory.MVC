@@ -16,7 +16,9 @@ namespace JewelryMaking.Models
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
         public int Quantity { get; set; }
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
+        [DataType(DataType.Currency)]
         public double SubTotal { get; set; }
     }
 }

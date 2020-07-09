@@ -19,13 +19,17 @@
             border-right: 5px solid black;
             border-radius: 0px 0px 15px 15px;
         }
+
+        .right{
+            float:right;
+        }
     </style>
 <h2>Bead Index</h2>
 
 <p>
     @Html.ActionLink("Create a New Bead", "Create")
 </p>
-<p>
+<p class="right">
     @Html.ActionLink("SubTotal Beads", "IndexTotal")
 </p>
 <table class="table">

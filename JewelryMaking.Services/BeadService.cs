@@ -75,7 +75,6 @@ namespace JewelryMaking.Services
                         Quantity = e.Quantity,
                         Cost = e.Cost,
                         SubTotal = e.SubTotal,
-                        //LocationId = e.LocationId
                         //File = e.File
                     };
                     Result.Add(bead);
@@ -100,6 +99,7 @@ namespace JewelryMaking.Services
                     Color = entity.Color,
                     Quantity = entity.Quantity,
                     Cost = entity.Cost,
+                    SubTotal = entity.SubTotal,
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,

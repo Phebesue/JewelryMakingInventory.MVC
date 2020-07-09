@@ -20,6 +20,9 @@
         border-right: 5px solid black;
         border-radius: 0px 0px 15px 15px;
     }
+    .right {
+        float: right;
+    }
 </style>
 
 <h2>Index of Findings</h2>
@@ -27,7 +30,7 @@
 <p>
     @Html.ActionLink("Create New Finding", "Create")
 </p>
-<p>
+<p class="right">
     @Html.ActionLink("SubTotal Findings", "IndexTotal")
 </p>
 <table class="table">

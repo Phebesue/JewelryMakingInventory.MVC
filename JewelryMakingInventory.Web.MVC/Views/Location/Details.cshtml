@@ -3,73 +3,69 @@
 @{
     ViewBag.Title = "Details";
 }
-<style>
-    body {
-        background-image: url('../../Content/Assets/storage2.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+    <style>
 
-    .body-content {
-        background-color: white;
-        min-width: 500px;
-        max-width: 700px;
-        border-bottom: 5px solid black;
-        border-left: 5px solid black;
-        border-right: 5px solid black;
-        border-radius: 0px 0px 15px 15px;
-    }
-</style>
+        body {
+            background-image: url('../../Content/Assets/storage2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
+        .body-content {
+            background-color: white;
+            min-width: 500px;
+            max-width: 700px;
+        }
+    </style>
 <h2>Storage Location Details</h2>
 
 <div>
     <h4>Location Detail Menu</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    <dl class="row">
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.LocationId)
         </dt>
 
-        <dd>
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.LocationId)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Kind)
         </dt>
 
-        <dd>
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Kind)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Size)
         </dt>
 
-        <dd>
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Size)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Color)
         </dt>
 
-        <dd>
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Color)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Place)
         </dt>
 
-        <dd>
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Place)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId }, new { @class = "btn btn-chng" }) |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
 </p>

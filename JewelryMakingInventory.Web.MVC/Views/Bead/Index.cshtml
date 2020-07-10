@@ -12,13 +12,9 @@
 
         .body-content {
             background-color: white;
-            min-width: 800px;
+/*            min-width: 800px;
             max-width: 950px;
-            border-bottom: 5px solid black;
-            border-left: 5px solid black;
-            border-right: 5px solid black;
-            border-radius: 0px 0px 15px 15px;
-        }
+*/        }
 
         .right{
             float:right;
@@ -27,7 +23,7 @@
 <h2>Bead Index</h2>
 
 <p>
-    @Html.ActionLink("Create a New Bead", "Create")
+    @Html.ActionLink("Create a New Bead", "Create","", new { @class = "btn btn-save" })
 </p>
 <p class="right">
     @Html.ActionLink("SubTotal Beads", "IndexTotal")
@@ -70,9 +66,9 @@
             @Html.DisplayFor(modelItem => item.LocationId)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BeadId}) |
-            @Html.ActionLink("Details", "Details", new { id = item.BeadId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.BeadId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.BeadId }/*, new { @class = "btn btn-save" }*/) |
+            @Html.ActionLink("Details", "Details", new { id = item.BeadId }/*, new { @class = "btn btn-edit" }*/) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BeadId }/*, new { @class = "btn btn-rmv" }*/)
         </td>
     </tr>
 }

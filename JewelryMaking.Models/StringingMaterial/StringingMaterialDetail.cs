@@ -1,14 +1,8 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class StringingMaterialDetail
+    public class StringingMaterialDetail
     {
         public int StringingMaterialId { get; set; }
         public string Type { get; set; }
@@ -19,7 +13,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Length in Inches")]
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
-        [DataType(DataType.Currency)] 
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
         [DataType(DataType.Currency)]
         public double SubTotal { get; set; }

@@ -1,14 +1,8 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class FindingCreate
+    public class FindingCreate
     {
         [Required]
         public string Category { get; set; }

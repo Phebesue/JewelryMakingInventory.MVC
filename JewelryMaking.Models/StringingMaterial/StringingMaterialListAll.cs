@@ -1,16 +1,10 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class StringingMaterialListAll
+    public class StringingMaterialListAll
     {
-      [Display(Name ="Stringing Material ID #")]
+        [Display(Name = "Stringing Material ID #")]
         public int StringingMaterialId { get; set; }
         public string Type { get; set; }
         public string Material { get; set; }

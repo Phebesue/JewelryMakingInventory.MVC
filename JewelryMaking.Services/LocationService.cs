@@ -1,10 +1,7 @@
 ﻿using JewelryMaking.Data;
 using JewelryMaking.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JewelryMaking.Services
 {
@@ -59,7 +56,7 @@ namespace JewelryMaking.Services
                     Kind = entity.Kind,
                     Size = entity.Size,
                     Color = entity.Color,
-                    Place= entity.Place
+                    Place = entity.Place
                 };
             }
         }

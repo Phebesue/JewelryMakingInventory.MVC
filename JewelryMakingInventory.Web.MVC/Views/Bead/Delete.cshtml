@@ -13,11 +13,7 @@
     .body-content {
         background-color: #a5c161;
         min-width: 500px;
-        max-width: 600px;
-        border-bottom: 5px solid black;
-        border-left: 5px solid black;
-        border-right: 5px solid black;
-        border-radius: 0px 0px 15px 15px;
+        max-width: 700px;
     }
 </style>
 
@@ -27,100 +23,100 @@
 <div>
     <h4>Bead Delete Menu</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+        <dl class="row">
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.BeadId)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.BeadId)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Brand)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Brand)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Type)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Type)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.SubType)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.SubType)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Shape)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Shape)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Size)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Size)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Color)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Color)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Quantity)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Quantity)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Cost)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Cost)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.LocationId)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.LocationId)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.SourceId)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.SourceId)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Description)
         </dd>
 
@@ -130,9 +126,9 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-primary" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-rmv" /> |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
+</div>
     }
 </div>

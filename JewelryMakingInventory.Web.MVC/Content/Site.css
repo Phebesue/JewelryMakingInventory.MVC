@@ -5,8 +5,17 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    padding-top: 2rem;
     padding-left: 15px;
     padding-right: 15px;
+/*    font-size: 15px;
+*/    font-weight: 600;
+    min-width: 800px;
+    max-width: 1070px;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 0px 0px 15px 15px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +31,321 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/*BootSreap 3 dl-horizontal*/
+/*@media (min-width: 768px) {
+    .dl-horizontal dt {
+        float: left;
+        width: 160px;
+        clear: left;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 180px;
+    }
+}
+
+.dl-horizontal dd:before,
+.dl-horizontal dd:after, {
+    display: table;
+    content: " ";
+}
+
+.dl-horizontal dd:after {
+    clear: both;
+}*/
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+.btn-black {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-color: #130269;
+}
+
+    .btn-black:hover,
+    .btn-black:focus,
+    .btn-black:active,
+    .btn-black.active,
+    .open .dropdown-toggle.btn-black {
+        color: #FFFFFF;
+        background-color: #B5AA91;
+        border-color: #130269;
+    }
+
+    .btn-black:active,
+    .btn-black.active,
+    .open .dropdown-toggle.btn-black {
+        background-image: none;
+    }
+
+    .btn-black.disabled,
+    .btn-black[disabled],
+    fieldset[disabled] .btn-black,
+    .btn-black.disabled:hover,
+    .btn-black[disabled]:hover,
+    fieldset[disabled] .btn-black:hover,
+    .btn-black.disabled:focus,
+    .btn-black[disabled]:focus,
+    fieldset[disabled] .btn-black:focus,
+    .btn-black.disabled:active,
+    .btn-black[disabled]:active,
+    fieldset[disabled] .btn-black:active,
+    .btn-black.disabled.active,
+    .btn-black[disabled].active,
+    fieldset[disabled] .btn-black.active {
+        background-color: #000000;
+        border-color: #130269;
+    }
+
+    .btn-black .badge {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+.btn-save {
+    color: #FFFFFF;
+    background-color: #B5AA91;
+    border-color: #000000;
+}
+
+    .btn-save:hover,
+    .btn-save:focus,
+    .btn-save:active,
+    .btn-save.active,
+    .open .dropdown-toggle.btn-save {
+        color: #FFFFFF;
+        background-color: #a1ccc7;
+        border-color: #000000;
+    }
+
+    .btn-save:active,
+    .btn-save.active,
+    .open .dropdown-toggle.btn-save {
+        background-image: none;
+    }
+
+    .btn-save.disabled,
+    .btn-save[disabled],
+    fieldset[disabled] .btn-save,
+    .btn-save.disabled:hover,
+    .btn-save[disabled]:hover,
+    fieldset[disabled] .btn-save:hover,
+    .btn-save.disabled:focus,
+    .btn-save[disabled]:focus,
+    fieldset[disabled] .btn-save:focus,
+    .btn-save.disabled:active,
+    .btn-save[disabled]:active,
+    fieldset[disabled] .btn-save:active,
+    .btn-save.disabled.active,
+    .btn-save[disabled].active,
+    fieldset[disabled] .btn-save.active {
+        background-color: #B5AA91;
+        border-color: #000000;
+    }
+
+    .btn-save .badge {
+        color: #B5AA91;
+        background-color: #FFFFFF;
+    }
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+.btn-edit {
+    color: #FFFFFF;
+    background-color: #C9A757;
+    border-color: #000000;
+}
+
+    .btn-edit:hover,
+    .btn-edit:focus,
+    .btn-edit:active,
+    .btn-edit.active,
+    .open .dropdown-toggle.btn-edit {
+        color: #FFFFFF;
+        background-color: #949C9B;
+        border-color: #000000;
+    }
+
+    .btn-edit:active,
+    .btn-edit.active,
+    .open .dropdown-toggle.btn-edit {
+        background-image: none;
+    }
+
+    .btn-edit.disabled,
+    .btn-edit[disabled],
+    fieldset[disabled] .btn-edit,
+    .btn-edit.disabled:hover,
+    .btn-edit[disabled]:hover,
+    fieldset[disabled] .btn-edit:hover,
+    .btn-edit.disabled:focus,
+    .btn-edit[disabled]:focus,
+    fieldset[disabled] .btn-edit:focus,
+    .btn-edit.disabled:active,
+    .btn-edit[disabled]:active,
+    fieldset[disabled] .btn-edit:active,
+    .btn-edit.disabled.active,
+    .btn-edit[disabled].active,
+    fieldset[disabled] .btn-edit.active {
+        background-color: #C9A757;
+        border-color: #000000;
+    }
+
+    .btn-edit .badge {
+        color: #C9A757;
+        background-color: #FFFFFF;
+    }
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+
+.btn-chng {
+    color: #FFFFFF;
+    background-color: #949C9B;
+    border-color: #000000;
+}
+
+    .btn-chng:hover,
+    .btn-chng:focus,
+    .btn-chng:active,
+    .btn-chng.active,
+    .open .dropdown-toggle.btn-chng {
+        color: #FFFFFF;
+        background-color: #c9a757;
+        border-color: #000000;
+    }
+
+    .btn-chng:active,
+    .btn-chng.active,
+    .open .dropdown-toggle.btn-chng {
+        background-image: none;
+    }
+
+    .btn-chng.disabled,
+    .btn-chng[disabled],
+    fieldset[disabled] .btn-chng,
+    .btn-chng.disabled:hover,
+    .btn-chng[disabled]:hover,
+    fieldset[disabled] .btn-chng:hover,
+    .btn-chng.disabled:focus,
+    .btn-chng[disabled]:focus,
+    fieldset[disabled] .btn-chng:focus,
+    .btn-chng.disabled:active,
+    .btn-chng[disabled]:active,
+    fieldset[disabled] .btn-chng:active,
+    .btn-chng.disabled.active,
+    .btn-chng[disabled].active,
+    fieldset[disabled] .btn-chng.active {
+        background-color: #949C9B;
+        border-color: #000000;
+    }
+
+    .btn-chng .badge {
+        color: #949C9B;
+        background-color: #FFFFFF;
+    }
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+.btn-rmv {
+    color: #FFFFFF;
+    background-color: #852D2D;
+    border-color: #000000;
+}
+
+    .btn-rmv:hover,
+    .btn-rmv:focus,
+    .btn-rmv:active,
+    .btn-rmv.active,
+    .open .dropdown-toggle.btn-rmv {
+        color: #FFFFFF;
+        background-color: #B5AC98;
+        border-color: #000000;
+    }
+
+    .btn-rmv:active,
+    .btn-rmv.active,
+    .open .dropdown-toggle.btn-rmv {
+        background-image: none;
+    }
+
+    .btn-rmv.disabled,
+    .btn-rmv[disabled],
+    fieldset[disabled] .btn-rmv,
+    .btn-rmv.disabled:hover,
+    .btn-rmv[disabled]:hover,
+    fieldset[disabled] .btn-rmv:hover,
+    .btn-rmv.disabled:focus,
+    .btn-rmv[disabled]:focus,
+    fieldset[disabled] .btn-rmv:focus,
+    .btn-rmv.disabled:active,
+    .btn-rmv[disabled]:active,
+    fieldset[disabled] .btn-rmv:active,
+    .btn-rmv.disabled.active,
+    .btn-rmv[disabled].active,
+    fieldset[disabled] .btn-rmv.active {
+        background-color: #852D2D;
+        border-color: #000000;
+    }
+
+    .btn-rmv .badge {
+        color: #852D2D;
+        background-color: #FFFFFF;
+    }
+
+/*BootStrap Button Generator https://blog.koalite.com/bbg/ */
+
+.btn-add {
+    color: #FFFFFF;
+    background-color: #6AC3D9;
+    border-color: #000000;
+}
+
+    .btn-add:hover,
+    .btn-add:focus,
+    .btn-add:active,
+    .btn-add.active,
+    .open .dropdown-toggle.btn-add {
+        color: #FFFFFF;
+        background-color: #B5AC98;
+        border-color: #000000;
+    }
+
+    .btn-add:active,
+    .btn-add.active,
+    .open .dropdown-toggle.btn-add {
+        background-image: none;
+    }
+
+    .btn-add.disabled,
+    .btn-add[disabled],
+    fieldset[disabled] .btn-add,
+    .btn-add.disabled:hover,
+    .btn-add[disabled]:hover,
+    fieldset[disabled] .btn-add:hover,
+    .btn-add.disabled:focus,
+    .btn-add[disabled]:focus,
+    fieldset[disabled] .btn-add:focus,
+    .btn-add.disabled:active,
+    .btn-add[disabled]:active,
+    fieldset[disabled] .btn-add:active,
+    .btn-add.disabled.active,
+    .btn-add[disabled].active,
+    fieldset[disabled] .btn-add.active {
+        background-color: #6AC3D9;
+        border-color: #000000;
+    }
+
+    .btn-add .badge {
+        color: #6AC3D9;
+        background-color: #FFFFFF;
+    }

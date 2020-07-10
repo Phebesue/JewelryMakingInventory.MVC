@@ -1,11 +1,7 @@
 ﻿using JewelryMaking.Data;
 using JewelryMaking.Models;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JewelryMaking.Services
 {
@@ -47,7 +43,7 @@ namespace JewelryMaking.Services
                         ShowOrLocation = e.ShowOrLocation,
                     }
                     );
-             
+
                 return query.ToArray();
             }
         }

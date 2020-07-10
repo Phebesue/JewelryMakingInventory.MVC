@@ -1,9 +1,5 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
@@ -93,11 +89,11 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         //POST: Location/Delete/{id}
         [HttpPost]
         [ActionName("Delete")]
-        public ActionResult DeletePost (int id)
+        public ActionResult DeletePost(int id)
         {
             var service = new LocationService();
             service.DeleteLocation(id);
-            TempData["SaveResult"]= "Your location was deleted.";
+            TempData["SaveResult"] = "Your location was deleted.";
             return RedirectToAction("Index");
         }
     }

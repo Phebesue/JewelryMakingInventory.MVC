@@ -1,9 +1,5 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
@@ -18,7 +14,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         }
         // GET: Bead/Index/Subtotal
         [Route("Bead/Index/Subtotal")]
-        
+
         public ActionResult IndexTotal()
         {
             var beadService = new BeadService();

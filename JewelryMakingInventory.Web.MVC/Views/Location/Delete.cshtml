@@ -14,10 +14,6 @@
         background-color: white;
         min-width: 500px;
         max-width: 700px;
-        border-bottom: 5px solid black;
-        border-left: 5px solid black;
-        border-right: 5px solid black;
-        border-radius: 0px 0px 15px 15px;
     }
 </style>
 
@@ -27,44 +23,44 @@
 <div>
     <h4>Location Delete Menu</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+        <dl class="row">
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.LocationId)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.LocationId)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Kind)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Kind)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Size)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Size)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Color)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Color)
         </dd>
 
-        <dt>
+        <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.Place)
         </dt>
 
-        <dd>
+                <dd class="col-md-8">
             @Html.DisplayFor(model => model.Place)
         </dd>
 
@@ -74,9 +70,9 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-rmv" /> |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
+</div>
     }
 </div>

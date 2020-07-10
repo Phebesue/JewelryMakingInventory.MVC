@@ -25,6 +25,7 @@ namespace JewelryMaking.Data
         [Required]
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
 
         [ForeignKey("Location")]

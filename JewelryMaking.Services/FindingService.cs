@@ -96,6 +96,7 @@ namespace JewelryMaking.Services
                     Association = entity.Association,
                     Quantity = entity.Quantity,
                     Cost = entity.Cost,
+                    SubTotal = entity.SubTotal,
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,

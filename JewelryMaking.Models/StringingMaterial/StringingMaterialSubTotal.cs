@@ -19,7 +19,9 @@ namespace JewelryMaking.Models
         [Display(Name = "Length in Inches")]
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
+        [DataType(DataType.Currency)]
         public double SubTotal { get; set; }
     }
 }

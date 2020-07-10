@@ -22,6 +22,7 @@ namespace JewelryMaking.Data
         [Required]
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
         [ForeignKey("Location")]
         [Required]
@@ -33,6 +34,7 @@ namespace JewelryMaking.Data
         public virtual Source Source { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }
+        [DataType(DataType.Currency)]
         public double SubTotal
         {
             get

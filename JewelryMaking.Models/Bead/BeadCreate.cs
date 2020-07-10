@@ -24,6 +24,7 @@ namespace JewelryMaking.Models
         [Required]
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
+        [DataType(DataType.Currency)] 
         public double Cost { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }

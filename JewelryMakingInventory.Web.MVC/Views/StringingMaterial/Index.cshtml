@@ -19,6 +19,9 @@
         border-right: 5px solid black;
         border-radius: 0px 0px 15px 15px;
     }
+    .right {
+        float: right;
+    }
 </style>
 
 <h2>Stringing Material Index</h2>
@@ -26,7 +29,7 @@
 <p>
     @Html.ActionLink("Create New Stringing Material", "Create")
 </p>
-<p>
+<p class="right">
     @Html.ActionLink("SubTotal Stringing Materials", "IndexTotal")
 </p>
 <table class="table">

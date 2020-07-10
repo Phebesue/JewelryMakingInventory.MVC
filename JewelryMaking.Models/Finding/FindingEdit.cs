@@ -1,18 +1,12 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class FindingEdit
+    public class FindingEdit
     {
-        
+
         [Required]
-        [Display(Name = "Finding ID #")] 
+        [Display(Name = "Finding ID #")]
         public int FindingId { get; set; }
         [Required]
         public string Category { get; set; }

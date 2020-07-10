@@ -1,10 +1,4 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
@@ -23,7 +17,7 @@ namespace JewelryMaking.Models
         [Display(Name = "Cost per Item")]
         [DataType(DataType.Currency)]
         public double Cost { get; set; }
-        [DataType(DataType.Currency)] 
+        [DataType(DataType.Currency)]
         public double SubTotal { get; set; }
         [Display(Name = "Location ID #")]
         public int LocationId { get; set; }

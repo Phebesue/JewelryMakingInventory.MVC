@@ -1,14 +1,6 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
-using Microsoft.Ajax.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.Services.Description;
-using System.Web.UI.WebControls;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
 {
@@ -101,7 +93,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         // POST: Source/Delete/{id}
         [HttpPost]
         [ActionName("Delete")]
-            public ActionResult DeletePost (int id)
+        public ActionResult DeletePost(int id)
         {
             var service = new SourceService();
             service.DeleteSource(id);

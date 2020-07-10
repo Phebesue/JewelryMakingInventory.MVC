@@ -1,8 +1,7 @@
 ﻿namespace JewelryMaking.Data.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class SourceNotRequired : DbMigration
     {
         public override void Up()
@@ -18,7 +17,7 @@
             AddForeignKey("dbo.Findings", "SourceId", "dbo.Sources", "SourceId");
             AddForeignKey("dbo.StringingMaterials", "SourceId", "dbo.Sources", "SourceId");
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.StringingMaterials", "SourceId", "dbo.Sources");

@@ -1,10 +1,5 @@
 ﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JewelryMaking.Models
 {
@@ -30,7 +25,7 @@ namespace JewelryMaking.Models
         public string Description { get; set; }
         [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
-        [Display(Name = "Source ID #")] 
+        [Display(Name = "Source ID #")]
         public int? SourceId { get; set; }
 
         [Display(Name = "Image")]

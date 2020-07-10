@@ -11,7 +11,7 @@
         .body-content {
             background-color: rgba(181, 170, 145, 1);
             min-width: 800px;
-            max-width: 970px;
+            max-width: 1070px;
             border-bottom: 5px solid black;
             border-left: 5px solid black;
             border-right: 5px solid black;
@@ -26,42 +26,60 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Jewelry Materials Inventory", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Source", "Index", "Source")</li>
-                    <li>@Html.ActionLink("Location", "Index", "Location")</li>
-                    <li>@Html.ActionLink("Bead", "Index", "Bead")</li>
-                    <li>@Html.ActionLink("Stringing Material", "Index", "StringingMaterial")</li>
-                    <li>@Html.ActionLink("Findings", "Index", "Finding")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @Html.ActionLink("Jewelry Materials Inventory", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Source", "Index", "Source", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Location", "Index", "Location", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Bead", "Index", "Bead", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Stringing Material", "Index", "StringingMaterial", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Finding", "Index", "Finding", null, new { @class = "nav-link" })</li>
                 </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
 
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My Jewelry Materials Inventory   |   Summer J. Kerekes</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                @*<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="navbar-toggler-icon"></span>
+                                <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink("Jewelry Materials Inventory", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav mr-auto">
+                                <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Source", "Index", "Source")</li>
+                                <li>@Html.ActionLink("Location", "Index", "Location")</li>
+                                <li>@Html.ActionLink("Bead", "Index", "Bead")</li>
+                                <li>@Html.ActionLink("Stringing Material", "Index", "StringingMaterial")</li>
+                                <li>@Html.ActionLink("Findings", "Index", "Finding")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            </ul>*@
+                            @*@Html.Partial("_LoginPartial")*@
+                        </div>
+                    </div>
+                </nav>
+                <div class="container body-content">
+
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - My Jewelry Materials Inventory   |   Summer J. Kerekes</p>
+                    </footer>
+                </div>
+
+                @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
 </body>
 </html>

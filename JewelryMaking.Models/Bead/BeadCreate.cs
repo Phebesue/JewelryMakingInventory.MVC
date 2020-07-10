@@ -1,16 +1,10 @@
-﻿using JewelryMaking.Data;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class BeadCreate
+    public class BeadCreate
     {
-        
+
 
         public string Brand { get; set; }
         public string Type { get; set; }
@@ -24,7 +18,7 @@ namespace JewelryMaking.Models
         [Required]
         public int Quantity { get; set; }
         [Display(Name = "Cost per Item")]
-        [DataType(DataType.Currency)] 
+        [DataType(DataType.Currency)]
         public double Cost { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }

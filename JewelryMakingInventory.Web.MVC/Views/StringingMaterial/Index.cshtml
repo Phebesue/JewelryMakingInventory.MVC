@@ -12,12 +12,8 @@
 
     .body-content {
         background-color: white;
-        min-width: 800px;
-        max-width: 970px;
-        border-bottom: 5px solid black;
-        border-left: 5px solid black;
-        border-right: 5px solid black;
-        border-radius: 0px 0px 15px 15px;
+/*        min-width: 800px;*/
+        max-width: 1100px;
     }
     .right {
         float: right;
@@ -27,7 +23,7 @@
 <h2>Stringing Material Index</h2>
 
 <p>
-    @Html.ActionLink("Create New Stringing Material", "Create")
+    @Html.ActionLink("Create New Stringing Material", "Create", "", new { @class = "btn btn-save" })
 </p>
 <p class="right">
     @Html.ActionLink("SubTotal Stringing Materials", "IndexTotal")

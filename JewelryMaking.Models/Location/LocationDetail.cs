@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
-   public class LocationDetail
+    public class LocationDetail
     {
-        [Display(Name ="Location ID #")]
+        [Display(Name = "Location ID #")]
         public int LocationId { get; set; }
         [Required]
         public string Kind { get; set; }

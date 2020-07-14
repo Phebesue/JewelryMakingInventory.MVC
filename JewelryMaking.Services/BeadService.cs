@@ -6,7 +6,10 @@ using System.Linq;
 namespace JewelryMaking.Services
 {
     public class BeadService
+
     {//___________________Post-Create____________
+
+        FileUploadService _FileService = new FileUploadService();
         public bool CreateBead(BeadCreate model)
         {
             var entity = new Bead()
@@ -22,7 +25,7 @@ namespace JewelryMaking.Services
                 Description = model.Description,
                 LocationId = model.LocationId,
                 SourceId = model.SourceId,
-                //  File = model.File
+                File = _FileService.ConvertToBytes(model.File),
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -46,7 +49,7 @@ namespace JewelryMaking.Services
                         Shape = e.Shape,
                         Color = e.Color,
                         LocationId = e.LocationId
-                        //File = e.File
+                        //Image = e.Image
                     };
                     Result.Add(bead);
                 }
@@ -71,7 +74,7 @@ namespace JewelryMaking.Services
                         Quantity = e.Quantity,
                         Cost = e.Cost,
                         SubTotal = e.SubTotal,
-                        //File = e.File
+                        //Image = e.Image
                     };
                     Result.Add(bead);
                 }
@@ -99,7 +102,7 @@ namespace JewelryMaking.Services
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,
-                    //File = entity.File
+                    //Image = entity.Image
                 };
             }
         }
@@ -121,7 +124,7 @@ namespace JewelryMaking.Services
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
-                //entity.File = model.File;
+                //entity.Image = model.Image;
                 return ctx.SaveChanges() == 1;
             }
         }

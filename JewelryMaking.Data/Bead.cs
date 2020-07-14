@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Web;
 
 namespace JewelryMaking.Data
 {
@@ -43,9 +44,6 @@ namespace JewelryMaking.Data
                 return (Quantity * Cost);
             }
         }
-
-        //[Display(Name = "File")]
-        //[DataType(DataType.Upload)]
-        //public HttpPostedFileBase File { get; set; }
+        public byte[] File { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
+using System.Web;
 using System.Web.Mvc;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
@@ -31,7 +32,9 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         public ActionResult Create(BeadCreate model)
         {
             if (!ModelState.IsValid) return View(model);
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = new BeadService();
+            //int i = service.UploadImageInDataBase(file, model);
 
             if (service.CreateBead(model))
             {

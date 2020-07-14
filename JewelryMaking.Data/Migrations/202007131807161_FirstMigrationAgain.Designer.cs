@@ -7,13 +7,13 @@ namespace JewelryMaking.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddSubTotalToBead : IMigrationMetadata
+    public sealed partial class FirstMigrationAgain : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddSubTotalToBead));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigrationAgain));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007082030383_AddSubTotalToBead"; }
+            get { return "202007131807161_FirstMigrationAgain"; }
         }
         
         string IMigrationMetadata.Source

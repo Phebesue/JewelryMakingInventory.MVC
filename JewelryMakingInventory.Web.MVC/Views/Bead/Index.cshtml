@@ -3,31 +3,26 @@
 @{
     ViewBag.Title = "Index";
 }
-    <style>
-        body {
-            background-image: url('../../Content/Assets/kazuri4.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+<style>
+    body {
+        background-image: url('../../Content/Assets/kazuri4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-        .body-content {
-            background-color: white;
-/*            min-width: 800px;
-            max-width: 950px;
-*/        }
-
-        .right{
-            float:right;
-        }
-    </style>
+</style>
 <h2>Bead Index</h2>
 
-<p>
-    @Html.ActionLink("Create a New Bead", "Create","", new { @class = "btn btn-save" })
-</p>
-<p class="right">
-    @Html.ActionLink("SubTotal Beads", "IndexTotal")
-</p>
+
+<div class="row justify-content-between">
+    <div class="col-3">
+        @Html.ActionLink("New Bead", "Create", "", new { @class = "btn btn-black" })
+    </div>
+    <div class= "col-3">
+        @Html.ActionLink("SubTotal Beads", "IndexTotal", "", new { @class = "btn btn-chng" })
+    </div>
+</div>
+
 <table class="table">
     <tr>
         <th>
@@ -48,29 +43,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BeadId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shape)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LocationId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BeadId }/*, new { @class = "btn btn-save" }*/) |
-            @Html.ActionLink("Details", "Details", new { id = item.BeadId }/*, new { @class = "btn btn-edit" }*/) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.BeadId }/*, new { @class = "btn btn-rmv" }*/)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BeadId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shape)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BeadId }/*, new { @class = "btn btn-save" }*/) |
+                @Html.ActionLink("Details", "Details", new { id = item.BeadId }/*, new { @class = "btn btn-edit" }*/) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BeadId }/*, new { @class = "btn btn-rmv" }*/)
+            </td>
+        </tr>
+    }
 
 </table>

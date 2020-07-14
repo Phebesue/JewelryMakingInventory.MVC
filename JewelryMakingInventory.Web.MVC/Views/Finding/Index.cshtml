@@ -12,67 +12,65 @@
     }
 
     .body-content {
-        background-color: white;
         min-width: 800px;
         max-width: 970px;
-    }
-    .right {
-        float: right;
     }
 </style>
 
 <h2>Index of Findings</h2>
 
-<p>
-    @Html.ActionLink("Create New Finding", "Create", "", new { @class = "btn btn-save" })
-</p>
-<p class="right">
-    @Html.ActionLink("SubTotal Findings", "IndexTotal")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FindingId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th></th>
-    </tr>
+<div class="row justify-content-between">
+    <div class="col-3">
+        @Html.ActionLink("New Finding", "Create", "", new { @class = "btn btn-black" })
+    </div>
+    <div class="col-3">
+        @Html.ActionLink("SubTotal Findings", "IndexTotal", "", new { @class = "btn btn-chng" })
+    </div>
 
-    @foreach (var item in Model)
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FindingId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.FindingId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.FindingId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.FindingId })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.FindingId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FindingId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.FindingId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FindingId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.FindingId })
+                </td>
+            </tr>
+        }
+
+    </table>

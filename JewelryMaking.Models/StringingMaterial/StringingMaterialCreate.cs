@@ -6,14 +6,16 @@ namespace JewelryMaking.Models
     {
 
         [Required]
+       [Display(Name ="Type *")]
         public string Type { get; set; }
         [Required]
+        [Display(Name ="Material *")]
         public string Material { get; set; }
         public double Size { get; set; }
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
         [Required]
-        [Display(Name = "Length in Inches")]
+        [Display(Name = "Length in Inches *")]
         public double Length { get; set; }
         [Display(Name = "Cost per Inch")]
         public double Cost { get; set; }

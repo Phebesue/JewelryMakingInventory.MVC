@@ -174,6 +174,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BeadController.cs" />
+    <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\FindingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
@@ -359,7 +360,6 @@
     <Content Include="Views\Bead\Edit.cshtml" />
     <Content Include="Views\Bead\Delete.cshtml" />
     <Content Include="Views\Finding\Index.cshtml" />
-    <Content Include="Views\Bead\Create.cshtml" />
     <Content Include="Views\Bead\Index.cshtml" />
     <Content Include="Views\Bead\IndexTotal.cshtml" />
     <Content Include="Views\StringingMaterial\IndexTotal.cshtml" />
@@ -375,10 +375,13 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\FileUpload\Index.cshtml" />
+    <Content Include="Views\Bead\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Assets\" />
+    <Folder Include="UploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

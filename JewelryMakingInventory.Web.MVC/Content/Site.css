@@ -8,8 +8,8 @@
     padding-top: 2rem;
     padding-left: 15px;
     padding-right: 15px;
-/*    font-size: 15px;
-*/    font-weight: 600;
+    /*    font-size: 15px;
+*/ font-weight: 600;
     min-width: 800px;
     max-width: 1070px;
     border-bottom: 5px solid black;
@@ -39,32 +39,13 @@ textarea {
     line-height: 1.2;
 }
 
-/*BootSreap 3 dl-horizontal*/
-/*@media (min-width: 768px) {
-    .dl-horizontal dt {
-        float: left;
-        width: 160px;
-        clear: left;
-        text-align: right;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .dl-horizontal dd {
-        margin-left: 180px;
-    }
+.jumbotron h1 {
+    display: flex;
+    font-weight: 600;
 }
-
-.dl-horizontal dd:before,
-.dl-horizontal dd:after, {
-    display: table;
-    content: " ";
+.jumbotron p {
+    font-weight: 600;
 }
-
-.dl-horizontal dd:after {
-    clear: both;
-}*/
 
 /*BootStrap Button Generator https://blog.koalite.com/bbg/ */
 .btn-black {

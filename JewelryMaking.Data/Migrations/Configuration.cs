@@ -1,13 +1,15 @@
 ﻿namespace JewelryMaking.Data.Migrations
 {
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<JewelryMaking.Data.ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "JewelryMaking.Data.ApplicationDbContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(JewelryMaking.Data.ApplicationDbContext context)
@@ -16,19 +18,20 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
             context.Sources.AddOrUpdate(x => x.SourceId,
-         new Source() { SourceId = 1, Name = "Joann Fabrics", WebSite = "www.joann.com", ShowOrLocation = "Greenwood", Address = " 1260 U.S. 31 N ", City = "Greenwood", State = "IN", ZipCode = "46142", Note = "" },
-         new Source() { SourceId = 2, Name = "Joann Fabrics", WebSite = "www.joann.com", ShowOrLocation = "Mason", Address = "8125 Arbor Square Dr ", City = "Mason", State = "OH", ZipCode = "45040", Note = "" },
-         new Source() { SourceId = 3, Name = "Michael's", WebSite = "www.michaels.com", ShowOrLocation = "Mason", Address = "9851 Waterstone Blvd", City = "Cincinnati", State = "OH", ZipCode = "45040", Note = "" },
-         new Source() { SourceId = 4, Name = "Michael's", WebSite = "www.michaels.com", ShowOrLocation = "Greenwood", Address = "8030 US-31", City = "Indianapolis", State = "IN", ZipCode = "46227", Note = "" },
-         new Source() { SourceId = 5, Name = "Small and Beautiful Beads", WebSite = "https://www.kazuriwest.com", ShowOrLocation = "Gem Street USA", Address = "13714 Barfield Drive", City = "Warren", State = "MI", ZipCode = "48088", Note = "Tamie Simpson, Email: tamiesimpson111@gmail.com, Phone: 810.919.4386, Now runs Kazuri West" },
-         new Source() { SourceId = 6, Name = "Elka Designs", WebSite = "https://www.elka-designs.shoppingcartsplus.com/index.html", ShowOrLocation = "Gem Street USA", Address = "suite 101, 1098 S.Milwaukee Ave", City = "Wheeling", State = "IL", ZipCode = "60090", Note = "Jolanta, Phone Number: 847-387-2973, Email Address:  pljola7@comcast.net" },
-         new Source() { SourceId = 7, Name = "Newtique Beads", WebSite = "", ShowOrLocation = "Gem Street USA", Address = "", City = "Kingsport", State = "TN", ZipCode = "", Note = "Zenda Conerly, Email: newtique@chartertn.net" },
-         new Source() { SourceId = 8, Name = "Queen’s Beads", WebSite = "https://www.queensbeads.net/", ShowOrLocation = "Gem Street USA", Address = "1985 Lincoln Way", City = "White Oak", State = "PA", ZipCode = "15131", Note = "David and Karen Thomas, Phone number: 412-896-6966" },
-         new Source() { SourceId = 9, Name = "The Silverlady II", WebSite = "http://www.silverlady2.com/", ShowOrLocation = "Gem Street USA", Address = "", City = "Cincinnati", State = "OH", ZipCode = "45242", Note = " Barbara Schulman, Phone number: 513.543.1241" },
-         new Source() { SourceId = 10, Name = "Quest Crystals", WebSite = "", ShowOrLocation = "Gem Street USA", Address = "", City = "Warren", State = "OH", ZipCode = "", Note = "Ken Poore, Phone number = 330.360.6858" },
-         new Source() { SourceId = 11, Name = "T & T Trading", WebSite = "http://tttbeads.com", ShowOrLocation = "Grand Ledge", Address = "1063 E Grand Ledge Hwy", City = "Grand Ledge", State = "MI", ZipCode = "48837", Note = " Tom and Theada Howard, Son = Dan, Email: Tom@tttbeads.com, Phone number: 517-627-2333" }
-         );
+             new Source() { SourceId = 1, Name = "Joann Fabrics", WebSite = "www.joann.com", ShowOrLocation = "Greenwood", Address = " 1260 U.S. 31 N ", City = "Greenwood", State = "IN", ZipCode = "46142", Note = "" },
+             new Source() { SourceId = 2, Name = "Joann Fabrics", WebSite = "www.joann.com", ShowOrLocation = "Mason", Address = "8125 Arbor Square Dr ", City = "Mason", State = "OH", ZipCode = "45040", Note = "" },
+             new Source() { SourceId = 3, Name = "Michael's", WebSite = "www.michaels.com", ShowOrLocation = "Mason", Address = "9851 Waterstone Blvd", City = "Cincinnati", State = "OH", ZipCode = "45040", Note = "" },
+             new Source() { SourceId = 4, Name = "Michael's", WebSite = "www.michaels.com", ShowOrLocation = "Greenwood", Address = "8030 US-31", City = "Indianapolis", State = "IN", ZipCode = "46227", Note = "" },
+             new Source() { SourceId = 5, Name = "Small and Beautiful Beads", WebSite = "https://www.kazuriwest.com", ShowOrLocation = "Gem Street USA", Address = "13714 Barfield Drive", City = "Warren", State = "MI", ZipCode = "48088", Note = "Tamie Simpson, Email: tamiesimpson111@gmail.com, Phone: 810.919.4386, Now runs Kazuri West" },
+             new Source() { SourceId = 6, Name = "Elka Designs", WebSite = "https://www.elka-designs.shoppingcartsplus.com/index.html", ShowOrLocation = "Gem Street USA", Address = "suite 101, 1098 S.Milwaukee Ave", City = "Wheeling", State = "IL", ZipCode = "60090", Note = "Jolanta, Phone Number: 847-387-2973, Email Address:  pljola7@comcast.net" },
+             new Source() { SourceId = 7, Name = "Newtique Beads", WebSite = "", ShowOrLocation = "Gem Street USA", Address = "", City = "Kingsport", State = "TN", ZipCode = "", Note = "Zenda Conerly, Email: newtique@chartertn.net" },
+             new Source() { SourceId = 8, Name = "Queen’s Beads", WebSite = "https://www.queensbeads.net/", ShowOrLocation = "Gem Street USA", Address = "1985 Lincoln Way", City = "White Oak", State = "PA", ZipCode = "15131", Note = "David and Karen Thomas, Phone number: 412-896-6966" },
+             new Source() { SourceId = 9, Name = "The Silverlady II", WebSite = "http://www.silverlady2.com/", ShowOrLocation = "Gem Street USA", Address = "", City = "Cincinnati", State = "OH", ZipCode = "45242", Note = " Barbara Schulman, Phone number: 513.543.1241" },
+             new Source() { SourceId = 10, Name = "Quest Crystals", WebSite = "", ShowOrLocation = "Gem Street USA", Address = "", City = "Warren", State = "OH", ZipCode = "", Note = "Ken Poore, Phone number = 330.360.6858" },
+             new Source() { SourceId = 11, Name = "T & T Trading", WebSite = "http://tttbeads.com", ShowOrLocation = "Grand Ledge", Address = "1063 E Grand Ledge Hwy", City = "Grand Ledge", State = "MI", ZipCode = "48837", Note = " Tom and Theada Howard, Son = Dan, Email: Tom@tttbeads.com, Phone number: 517-627-2333" }
+             );
 
             context.Locations.AddOrUpdate(x => x.LocationId,
                 new Location() { LocationId = 1, Kind = "RolyKit", Size = "Large", Color = "Blue", Place = "Stack" },
@@ -60,8 +63,8 @@
                 );
 
             context.StringingMaterials.AddOrUpdate(x => x.StringingMaterialId,
-                new StringingMaterial() { StringingMaterialId = 1, Type = "Cord", Material = "Leather", Size = 2, Color = "Black", Length = 1800, Cost = 0.03, Description = "", LocationId = 14, SourceId = 1 },
-                new StringingMaterial() { StringingMaterialId = 2, Type = "Cord", Material = "Leather", Size = 2, Color = "Brown", Length = 1800, Cost = 0.03, Description = "", LocationId = 14, SourceId = 1 },
+                new StringingMaterial() { StringingMaterialId = 1, Type = "Cord", Material = "Leather", Size = 2, Color = "Black", Length = 1800, Cost = 0.13, Description = "", LocationId = 14, SourceId = 1 },
+                new StringingMaterial() { StringingMaterialId = 2, Type = "Cord", Material = "Leather", Size = 2, Color = "Brown", Length = 1800, Cost = 0.13, Description = "", LocationId = 14, SourceId = 1 },
                 new StringingMaterial() { StringingMaterialId = 3, Type = "Cord", Material = "Leather", Size = 2, Color = "Navy", Length = 180, Cost = 0.25, Description = "Weathered", LocationId = 14, SourceId = 8 },
                 new StringingMaterial() { StringingMaterialId = 4, Type = "Cord", Material = "Leather", Size = 5, Color = "Black", Length = 120, Cost = 0.35, Description = "polished", LocationId = 14, SourceId = 8 },
                 new StringingMaterial() { StringingMaterialId = 5, Type = "Cord", Material = "Leather", Size = 5, Color = "Aqua", Length = 24, Cost = 0.35, Description = "metallic", LocationId = 14, SourceId = 8 }

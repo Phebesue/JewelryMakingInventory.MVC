@@ -7,18 +7,18 @@ namespace JewelryMaking.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SourceNotRequired : IMigrationMetadata
+    public sealed partial class AddImageToBead : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SourceNotRequired));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddImageToBead));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007081758373_SourceNotRequired"; }
+            get { return "202007141632117_AddImageToBead"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

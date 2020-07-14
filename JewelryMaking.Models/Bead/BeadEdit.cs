@@ -12,14 +12,16 @@ namespace JewelryMaking.Models
         public string Type { get; set; }
         public string SubType { get; set; }
         [Required]
+        [Display(Name = "Shape *")]
         public string Shape { get; set; }
         public string Size { get; set; }
         [Required]
-        [Display(Name = "Color or Finish")]
+        [Display(Name = "Color or Finish *")]
         public string Color { get; set; }
         [Required]
+        [Display(Name = "Quantity *")]
         public int Quantity { get; set; }
-        [Display(Name = "Cost per Item")]
+        [Display(Name = "Cost per Item *")]
         public double Cost { get; set; }
         [MaxLength(8000, ErrorMessage = "Too Long.")]
         public string Description { get; set; }

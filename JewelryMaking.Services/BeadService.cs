@@ -84,7 +84,7 @@ namespace JewelryMaking.Services
                 return Result;
             }
         }
-        //___________________Get-By Id____________
+        //___________________Get/Read-By Id____________
         public BeadDetail GetBeadById(int beadId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -111,6 +111,10 @@ namespace JewelryMaking.Services
                     SourceId = entity.SourceId,
                     Description = entity.Description,
                     FileAsBytes = entity.File
+                    //    if (null != FileAsBytes){
+                    //    FileAsBytes = entity.File
+                    //}
+                    //else { FileAsBytes}
                 };
             }
         }

@@ -71,7 +71,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Description = detail.Description,
                 LocationId = detail.LocationId,
                 SourceId = detail.SourceId,
-                FileAsBytes= detail.FileAsBytes,
+                FileAsBytes = detail.FileAsBytes,
             };
             return View(model);
         }

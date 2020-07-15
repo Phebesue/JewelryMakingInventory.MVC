@@ -31,9 +31,13 @@ namespace JewelryMaking.Models
         {
             get
             {
-                string mimeType = "image/jpeg" /* Get mime type somehow (e.g. "image/png") */;
-                string base64 = Convert.ToBase64String(FileAsBytes);
-                return string.Format("data:{0};base64,{1}", mimeType, base64);
+                if (FileAsBytes != null)
+                {
+                    string mimeType = "image/jpeg" /* Get mime type somehow (e.g. "image/png") */;
+                    string base64 = Convert.ToBase64String(FileAsBytes);
+                    return string.Format("data:{0};base64,{1}", mimeType, base64);
+                }
+                else { return ""; }
             }
         }
     }

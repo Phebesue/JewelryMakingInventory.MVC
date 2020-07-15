@@ -133,16 +133,14 @@
     </dl>
 
 
-    @*<div class="itemImage">
-                @if (Model.File = "0")
-                {
-        <img src="~/Assets/blank.png" alt="no image" /> }
-                    else
-                    {
-        <img src="@imgSrc" alt="@Model.File" class="" />}
-            </div>*@
-
-    <img src="@Model.File" height=200 width=200 />
+    <div class="itemImage">
+        @if (Model.File != "")
+        {
+            <img src="@Model.File" height=200 width=200 />}
+        //else
+        //{
+        @*<img src="../../Content/Assets/blank.png" alt="no image" /> }*@
+    </div>
 
 </div>
 <p>

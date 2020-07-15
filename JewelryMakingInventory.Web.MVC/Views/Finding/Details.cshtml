@@ -116,8 +116,11 @@
 
     </dl>
 
-    <img src="@Model.File" height=200 width=200 />
-
+    <div class="itemImage">
+        @if (Model.File != "")
+        {
+            <img src="@Model.File" height=200 width=200 />}
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.FindingId }, new { @class = "btn btn-chng" }) |

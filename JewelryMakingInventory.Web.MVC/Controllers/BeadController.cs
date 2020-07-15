@@ -34,7 +34,6 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
             if (!ModelState.IsValid) return View(model);
             HttpPostedFileBase file = Request.Files["ImageData"];
             var service = new BeadService();
-            //int i = service.UploadImageInDataBase(file, model);
 
             if (service.CreateBead(model))
             {
@@ -72,6 +71,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Description = detail.Description,
                 LocationId = detail.LocationId,
                 SourceId = detail.SourceId,
+                FileAsBytes= detail.FileAsBytes,
             };
             return View(model);
         }

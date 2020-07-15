@@ -41,7 +41,7 @@ namespace JewelryMaking.Data
                 return (Length * Cost);
             }
         }
-        //[Display(Name = "Image")]
-        //public ImageFile StringingImage { get; set; }
+        [Display(Name = "Image")]
+        public byte[] File { get; set; }
     }
 }

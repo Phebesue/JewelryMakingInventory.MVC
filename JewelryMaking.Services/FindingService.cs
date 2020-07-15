@@ -7,6 +7,9 @@ namespace JewelryMaking.Services
 {
     public class FindingService
     {//___________________Create____________
+
+        FileUploadService _FileService = new FileUploadService();
+
         public bool CreateFinding(FindingCreate model)
         {
             var entity = new Finding()
@@ -21,7 +24,7 @@ namespace JewelryMaking.Services
                 LocationId = model.LocationId,
                 SourceId = model.SourceId,
                 Description = model.Description,
-                //FindingImage = model.FindingImage
+                File = _FileService.ConvertToBytes(model.File),
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -97,11 +100,11 @@ namespace JewelryMaking.Services
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,
-                    //FindingImage = entity.FindingImage
+                    FileAsBytes = entity.File
                 };
             }
         }
-        //___________________Edit-Update____________
+        //___________________________Put-Update____________
         public bool UpdateFinding(FindingEdit model)
         {
             using (var ctx = new ApplicationDbContext())

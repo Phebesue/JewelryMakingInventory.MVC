@@ -8,6 +8,8 @@ namespace JewelryMaking.Services
     public class StringingMaterialService
     {
         //___________________Create____________
+        FileUploadService _FileService = new FileUploadService();
+
         public bool CreateStringingMaterial(StringingMaterialCreate model)
         {
             var entity = new StringingMaterial()
@@ -21,7 +23,7 @@ namespace JewelryMaking.Services
                 Description = model.Description,
                 LocationId = model.LocationId,
                 SourceId = model.SourceId,
-                //StringingImage = model.StringingImage
+                File = _FileService.ConvertToBytes(model.File),
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -99,7 +101,7 @@ namespace JewelryMaking.Services
                     Description = entity.Description,
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
-                    //StringingImage = entity.StringingImage
+                    FileAsBytes = entity.File
                 };
             }
         }

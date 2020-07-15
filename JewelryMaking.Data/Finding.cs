@@ -42,7 +42,7 @@ namespace JewelryMaking.Data
             }
         }
 
-        //[Display(Name = "Image")]
-        //public ImageFile FindingImage { get; set; }
+        [Display(Name = "Image")]
+        public byte[] File { get; set; }
     }
 }

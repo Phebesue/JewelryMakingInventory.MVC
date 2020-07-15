@@ -126,7 +126,24 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
 
-     </dl>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.File)
+        </dt>
+
+    </dl>
+
+
+    @*<div class="itemImage">
+                @if (Model.File = "0")
+                {
+        <img src="~/Assets/blank.png" alt="no image" /> }
+                    else
+                    {
+        <img src="@imgSrc" alt="@Model.File" class="" />}
+            </div>*@
+
+    <img src="@Model.File" height=200 width=200 />
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.BeadId }, new { @class = "btn btn-chng" }) |

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace JewelryMaking.Models
 {
@@ -11,6 +12,7 @@ namespace JewelryMaking.Models
         [Required]
         [Display(Name ="Material *")]
         public string Material { get; set; }
+        [Display(Name="Size *")]
         public double Size { get; set; }
         [Display(Name = "Color or Finish")]
         public string Color { get; set; }
@@ -26,7 +28,8 @@ namespace JewelryMaking.Models
         [Display(Name = "Source ID #")]
         public int? SourceId { get; set; }
 
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        [Display(Name = "Image")]
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase File { get; set; }
     }
 }

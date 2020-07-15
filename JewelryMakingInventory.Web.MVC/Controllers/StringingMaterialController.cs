@@ -1,5 +1,6 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
+using System.Web;
 using System.Web.Mvc;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
@@ -33,14 +34,15 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         public ActionResult Create(StringingMaterialCreate model)
         {
             if (!ModelState.IsValid) return View(model);
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = new StringingMaterialService();
 
             if (service.CreateStringingMaterial(model))
             {
-                TempData["SaveResult"] = "Your stringingMaterial was added.";
+                TempData["SaveResult"] = "Your stringing material was added.";
                 return RedirectToAction("Index");
             };
-            ModelState.AddModelError("", "StringingMaterial could not be added.");
+            ModelState.AddModelError("", "Stringing material could not be added.");
 
             return View(model);
         }

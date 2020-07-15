@@ -13,11 +13,11 @@
     .body-content {
         background-color: white;
         min-width: 500px;
-        max-width: 700px;
+        max-width: 900px;
     }
 </style>
 
-<h2>Stringing Material Edit</h2>
+<h2>Edit Stringing Material</h2>
 
 
 @using (Html.BeginForm("Edit", "StringingMaterial", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -111,9 +111,10 @@
         </div>
 
         <div class="form-group row">
-            <div class="col-md-4"></div>
+           <div class="col-md-4"></div>
             <div class="col-md-8">
                 <input type="submit" value="Save" class="btn btn-chng" />
+
             </div>
         </div>
     </form>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JewelryMaking.Data;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
@@ -17,6 +18,13 @@ namespace JewelryMaking.Services
             BinaryReader reader = new BinaryReader(image.InputStream);
             imageBytes = reader.ReadBytes((int)image.ContentLength);
             return imageBytes;
+        }
+        public byte[] GetFile(Bead file)
+        {
+            if (file == null)
+                return new byte[0];
+            else
+                return file.File;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JewelryMaking.Data;
 using JewelryMaking.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,8 @@ namespace JewelryMaking.Services
     {//___________________Post-Create____________
 
         FileUploadService _FileService = new FileUploadService();
+
+
         public bool CreateBead(BeadCreate model)
         {
             var entity = new Bead()
@@ -48,8 +51,8 @@ namespace JewelryMaking.Services
                         Type = e.Type,
                         Shape = e.Shape,
                         Color = e.Color,
-                        LocationId = e.LocationId
-                        //Image = e.Image
+                        LocationId = e.LocationId,
+                        //File = _FileService.ConvertToBytes(model.File),
                     };
                     Result.Add(bead);
                 }
@@ -87,6 +90,11 @@ namespace JewelryMaking.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var entity = ctx.Beads.Single(e => e.BeadId == beadId);
+                //string mimeType = "image/jpeg" /* Get mime type somehow (e.g. "image/png") */;
+                //string base64 = Convert.ToBase64String(entity.File);
+                //var fileString = string.Format("data:{0};base64,{1}", mimeType, base64);
+
+
                 return new BeadDetail
                 {
                     BeadId = entity.BeadId,
@@ -102,7 +110,7 @@ namespace JewelryMaking.Services
                     LocationId = entity.LocationId,
                     SourceId = entity.SourceId,
                     Description = entity.Description,
-                    //Image = entity.Image
+                    FileAsBytes = entity.File
                 };
             }
         }
@@ -124,7 +132,8 @@ namespace JewelryMaking.Services
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
-                //entity.Image = model.Image;
+                entity.File = model.FileAsBytes;
+
                 return ctx.SaveChanges() == 1;
             }
         }

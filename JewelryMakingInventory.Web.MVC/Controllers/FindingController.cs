@@ -1,5 +1,6 @@
 ﻿using JewelryMaking.Models;
 using JewelryMaking.Services;
+using System.Web;
 using System.Web.Mvc;
 
 namespace JewelryMakingInventory.Web.MVC.Controllers
@@ -19,6 +20,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         public ActionResult IndexTotal()
         {
             var findingService = new FindingService();
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var model = findingService.GetFindingSubTotal();
 
             return View(model);
@@ -34,6 +36,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         public ActionResult Create(FindingCreate model)
         {
             if (!ModelState.IsValid) return View(model);
+            HttpPostedFileBase file = Request.Files["ImageData"];
             var service = new FindingService();
 
             if (service.CreateFinding(model))
@@ -42,6 +45,7 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 return RedirectToAction("Index");
             };
             ModelState.AddModelError("", "Finding could not be added.");
+
             return View(model);
         }
         //GET: Finding/Details/{id}

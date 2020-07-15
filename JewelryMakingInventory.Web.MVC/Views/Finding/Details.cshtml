@@ -107,11 +107,17 @@
             @Html.DisplayNameFor(model => model.SourceId)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.SourceId)
         </dd>
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.File)
+        </dt>
 
     </dl>
+
+    <img src="@Model.File" height=200 width=200 />
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.FindingId }, new { @class = "btn btn-chng" }) |

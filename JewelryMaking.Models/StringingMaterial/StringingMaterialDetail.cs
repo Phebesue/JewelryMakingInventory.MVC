@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace JewelryMaking.Models
 {
@@ -23,7 +24,16 @@ namespace JewelryMaking.Models
         [Display(Name = "Source ID #")]
         public int? SourceId { get; set; }
 
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+        public byte[] FileAsBytes { get; set; }
+        [Display(Name = "Image")]
+        public string File
+        {
+            get
+            {
+                string mimeType = "image/jpeg" /* Get mime type somehow (e.g. "image/png") */;
+                string base64 = Convert.ToBase64String(FileAsBytes);
+                return string.Format("data:{0};base64,{1}", mimeType, base64);
+            }
+        }
     }
 }

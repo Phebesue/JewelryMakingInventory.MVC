@@ -14,12 +14,6 @@
         min-width: 500px;
         max-width: 600px;
     }
-
-    .btn-black {
-        color: #FFFFFF;
-        background-color: #000000;
-        border-color: #130269;
-    }
 </style>
 
 <h2>Stringing Material Details</h2>
@@ -116,7 +110,9 @@
             @Html.DisplayFor(model => model.SourceId)
         </dd>
 
-        </dl>
+    </dl>
+
+    <img src="@Model.File" height=200 width=200 />
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.StringingMaterialId }, new { @class = "btn btn-chng" }) |

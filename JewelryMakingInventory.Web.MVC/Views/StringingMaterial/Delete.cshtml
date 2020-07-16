@@ -22,12 +22,12 @@
 <section>
     <h4>Stringing Material Delete Menu</h4>
     <hr />
-        <dl class="row">
+    <dl class="row">
         <dt class="col-md-4">
             @Html.DisplayNameFor(model => model.StringingMaterialId)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.StringingMaterialId)
         </dd>
 
@@ -35,7 +35,7 @@
             @Html.DisplayNameFor(model => model.Type)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Type)
         </dd>
 
@@ -43,7 +43,7 @@
             @Html.DisplayNameFor(model => model.Material)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Material)
         </dd>
 
@@ -51,7 +51,7 @@
             @Html.DisplayNameFor(model => model.Size)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Size)
         </dd>
 
@@ -59,7 +59,7 @@
             @Html.DisplayNameFor(model => model.Color)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Color)
         </dd>
 
@@ -67,7 +67,7 @@
             @Html.DisplayNameFor(model => model.Length)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Length)
         </dd>
 
@@ -75,7 +75,7 @@
             @Html.DisplayNameFor(model => model.Cost)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Cost)
         </dd>
 
@@ -83,7 +83,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.Description)
         </dd>
 
@@ -91,7 +91,7 @@
             @Html.DisplayNameFor(model => model.LocationId)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.LocationId)
         </dd>
 
@@ -99,18 +99,28 @@
             @Html.DisplayNameFor(model => model.SourceId)
         </dt>
 
-                <dd class="col-md-8">
+        <dd class="col-md-8">
             @Html.DisplayFor(model => model.SourceId)
         </dd>
 
+        <dt class="col-md-4">
+            @Html.DisplayNameFor(model => model.ImageFile)
+        </dt>
     </dl>
 
-    @using (Html.BeginForm()) {
+    <div class="itemImage">
+        @if (Model.ImageFile != "")
+        {
+            <img src="@Model.ImageFile" height=200 width=200 />}
+    </div>
+
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-<div class="form-actions no-color">
-    <input type="submit" value="Delete" class="btn btn-rmv" /> |
-    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
-</div>
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-rmv" /> |
+            @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
+        </div>
     }
 </section>

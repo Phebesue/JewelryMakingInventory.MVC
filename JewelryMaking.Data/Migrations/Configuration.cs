@@ -14,7 +14,7 @@
 
         protected override void Seed(JewelryMaking.Data.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            //This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
@@ -51,15 +51,14 @@
                 );
 
             context.Beads.AddOrUpdate(x => x.BeadId,
-                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 2, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Blue & White", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 3, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Red & Yellow", Quantity = 5, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 4, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black, Gray & White", Quantity = 3, Description = "Monet", Cost = 2.75, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 5, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Wavy", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 6, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black & White", Quantity = 3, Description = "Dots", Cost = 3.5, LocationId = 1, SourceId = 5 },
-                new Bead() { BeadId = 7, Brand = "", Type = "", Shape = "Round", Size = "12mm", Color = "White ", Quantity = 3, Description = "Opalescent", Cost = 0.0, LocationId = 7 },
-                new Bead() { BeadId = 8, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Blue", Quantity = 33, Description = "", Cost = 1, LocationId = 8, SourceId = 11 },
-                new Bead() { BeadId = 9, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Aqua", Quantity = 100, Description = "", Cost = 1, LocationId = 8, SourceId = 11 }
+                new Bead() { BeadId = 1, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = ": Black,Dove,Caprice", Quantity = 3, Description = "Jambo S", Cost = 3.5, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 2, Brand = "Kazuri", Type = "Clay", Shape = "Charleston", Size = "22 - 23mm", Color = "Granite", Quantity = 3, Description = "22-23mm Charleston - Derrick ll Design - Granite/MOP/14k decor", Cost = 4.0, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 3, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Aqua", Quantity = 100, Description = "", Cost = 1, LocationId = 8, SourceId = 11 },
+                new Bead() { BeadId = 4, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Black,Dove Grey,Pigeon", Quantity = 3, Description = "Monet", Cost = 2.75, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 5, Brand = "Kazuri", Type = "Clay", Shape = "Pita Pat", Size = "22 - 23mm", Color = "Red, Gray & White", Quantity = 3, Description = "Spaghetti Splash", Cost = 2.75, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 6, Brand = "Kazuri", Type = "Clay", Shape = "Round", Size = "10 - 12mm", Color = "Pansy Blue", Quantity = 3, Description = "10-12mm Rounds - Solid - Pansy with MOP finish", Cost = 2.5, LocationId = 1, SourceId = 5 },
+                new Bead() { BeadId = 7, Brand = "Kazuri", Type = "Clay", Shape = "Round", Size = "15 - 17mm", Color = "White ", Quantity = 3, Description = "MOP", Cost = 3.5, LocationId = 7, SourceId = 5 },
+                new Bead() { BeadId = 8, Brand = "Swarovski", Type = "Crystal", Shape = "Bicone", Size = "4mm", Color = "Blue", Quantity = 33, Description = "", Cost = 1, LocationId = 8, SourceId = 11 }
                 );
 
             context.StringingMaterials.AddOrUpdate(x => x.StringingMaterialId,
@@ -67,7 +66,7 @@
                 new StringingMaterial() { StringingMaterialId = 2, Type = "Cord", Material = "Leather", Size = 2, Color = "Brown", Length = 1800, Cost = 0.13, Description = "", LocationId = 14, SourceId = 1 },
                 new StringingMaterial() { StringingMaterialId = 3, Type = "Cord", Material = "Leather", Size = 2, Color = "Navy", Length = 180, Cost = 0.25, Description = "Weathered", LocationId = 14, SourceId = 8 },
                 new StringingMaterial() { StringingMaterialId = 4, Type = "Cord", Material = "Leather", Size = 5, Color = "Black", Length = 120, Cost = 0.35, Description = "polished", LocationId = 14, SourceId = 8 },
-                new StringingMaterial() { StringingMaterialId = 5, Type = "Cord", Material = "Leather", Size = 5, Color = "Aqua", Length = 24, Cost = 0.35, Description = "metallic", LocationId = 14, SourceId = 8 }
+                new StringingMaterial() { StringingMaterialId = 5, Type = "Cord", Material = "Leather", Size = 2, Color = "Teal", Length = 24, Cost = 0.35, Description = "metallic", LocationId = 14, SourceId = 8 }
                 );
 
             context.Findings.AddOrUpdate(x => x.FindingId,
@@ -75,7 +74,7 @@
                 new Finding() { FindingId = 2, Category = "Clasp", SubType = "Magnetic", Size = "10mm", Color = "Brass Tone", Association = "Leather", Quantity = 6, Cost = 6, LocationId = 2, SourceId = 8 },
                 new Finding() { FindingId = 3, Category = "Clasp", SubType = "Magnetic", Size = "10mm", Color = "Copper Tone", Association = "Leather", Quantity = 5, Cost = 6, LocationId = 2, SourceId = 8 },
                 new Finding() { FindingId = 4, Category = "Clasp", SubType = "Toggle", Size = "10mm", Color = "Silver Tone", Association = "Kumihimo", Quantity = 5, Cost = 6, LocationId = 2, SourceId = 2 },
-                new Finding() { FindingId = 5, Category = "Clasp", SubType = "Lobster", Size = "6mm", Color = "Silver Tone", Association = "", Quantity = 10, Cost = 1.5, LocationId = 2, SourceId = 8 }
+                new Finding() { FindingId = 5, Category = "Clasp", SubType = "Lobster", Size = "6mm", Color = "Silver Tone", Association = "", Quantity = 10, Cost = 1.5, LocationId = 2, SourceId = 8, }
                 );
         }
     }

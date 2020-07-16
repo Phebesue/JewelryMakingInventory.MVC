@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace JewelryMaking.Models
 {
@@ -28,8 +29,14 @@ namespace JewelryMaking.Models
         public int LocationId { get; set; }
         [Display(Name = "Source ID #")]
         public int? SourceId { get; set; }
+        // for uploading a new file
+        [Display(Name = "Image")]
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase File { get; set; }
 
-        //[Display(Name = "Image")]
-        //public virtual ImageFile BeadImage { get; set; }
+
+        // for displaying the current image
+        public byte[] FileAsBytes { get; set; } // this is like a backing field.
+        public string ImageFile { get; set; }
     }
 }

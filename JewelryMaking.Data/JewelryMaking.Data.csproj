@@ -75,6 +75,10 @@
     <Compile Include="Migrations\202007141840237_AddImageUploadToFindStringingMaterial.designer.cs">
       <DependentUpon>202007141840237_AddImageUploadToFindStringingMaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007151910257_RemoveUrlFromSource.cs" />
+    <Compile Include="Migrations\202007151910257_RemoveUrlFromSource.designer.cs">
+      <DependentUpon>202007151910257_RemoveUrlFromSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source.cs" />
@@ -203,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007141840237_AddImageUploadToFindStringingMaterial.resx">
       <DependentUpon>202007141840237_AddImageUploadToFindStringingMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007151910257_RemoveUrlFromSource.resx">
+      <DependentUpon>202007151910257_RemoveUrlFromSource.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

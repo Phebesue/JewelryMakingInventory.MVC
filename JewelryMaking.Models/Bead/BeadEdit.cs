@@ -1,6 +1,7 @@
 ﻿using JewelryMaking.Data;
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 
 namespace JewelryMaking.Models
 {
@@ -31,16 +32,14 @@ namespace JewelryMaking.Models
         [Display(Name = "Source ID #")]
         public int? SourceId { get; set; }
 
-        public byte[] FileAsBytes { get; set; } // this is like a backing field. 
+        // for uploading a new file
         [Display(Name = "Image")]
-        public string File
-        {
-            get
-            {
-                string mimeType = "image/jpeg" /* Get mime type somehow (e.g. "image/png") */;
-                string base64 = Convert.ToBase64String(FileAsBytes);
-                return string.Format("data:{0};base64,{1}", mimeType, base64);
-            }
-        }
+        [DataType(DataType.Upload)]
+        public HttpPostedFileBase File { get; set; }
+
+
+        // for displaying the current image
+        public byte[] FileAsBytes { get; set; } // this is like a backing field.
+        public string ImageFile { get; set; }
     }
 }

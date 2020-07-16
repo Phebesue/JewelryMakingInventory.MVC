@@ -80,7 +80,7 @@ namespace JewelryMaking.Services
                 return Result;
             }
         }
-        //___________________Get-By Id____________
+        //___________________Get/Read-By Id____________
         public FindingDetail GetFindingById(int beadId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -121,7 +121,8 @@ namespace JewelryMaking.Services
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
-                //entity.FindingImage = model.FindingImage;
+                if (model.File != null)
+                    entity.File = _FileService.ConvertToBytes(model.File);
 
                 return ctx.SaveChanges() == 1;
             }

@@ -26,7 +26,7 @@ namespace JewelryMaking.Models
 
         public byte[] FileAsBytes { get; set; }
         [Display(Name = "Image")]
-        public string File
+        public string ImageFile
         {
             get
             {

@@ -1,5 +1,5 @@
 "# JewelryMakingInventory.MVC" 
-    </style>
+   
 <div class="jumbotron">
         <h1 class="display-4">Jewelry Materials Inventory</h1>
         <p>This is an ASP.NET app using the Model View Controller pattern. The premise is...<br />  You make jewelry and therefore need to track not only your actual supplies, but where you store them and where you got them (if you need to get more, etc.)<hr /></p>

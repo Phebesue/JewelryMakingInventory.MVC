@@ -71,7 +71,8 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
                 Description = detail.Description,
                 LocationId = detail.LocationId,
                 SourceId = detail.SourceId,
-                //StringingImage = detail.StringingImage
+                FileAsBytes = detail.FileAsBytes,
+                ImageFile = detail.ImageFile
             };
             return View(model);
         }
@@ -80,6 +81,8 @@ namespace JewelryMakingInventory.Web.MVC.Controllers
         public ActionResult Edit(int id, StringingMaterialEdit model)
         {
             if (!ModelState.IsValid) return View(model);
+            HttpPostedFileBase file = Request.Files["ImageData"];
+
             if (model.StringingMaterialId != id)
             {
                 ModelState.AddModelError("", "ID# Mismatch");

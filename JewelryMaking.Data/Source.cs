@@ -9,7 +9,6 @@ namespace JewelryMaking.Data
         public int SourceId { get; set; }
         [Required]
         public string Name { get; set; }
-        [Url]
         public string WebSite { get; set; }
         [Required]
         [MaxLength(200, ErrorMessage = "There are too many characters in this field.")]

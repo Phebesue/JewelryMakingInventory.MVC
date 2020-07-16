@@ -12,7 +12,6 @@ namespace JewelryMaking.Services
 
         FileUploadService _FileService = new FileUploadService();
 
-
         public bool CreateBead(BeadCreate model)
         {
             var entity = new Bead()
@@ -76,8 +75,7 @@ namespace JewelryMaking.Services
                         Color = e.Color,
                         Quantity = e.Quantity,
                         Cost = e.Cost,
-                        SubTotal = e.SubTotal,
-                        //Image = e.Image
+                        SubTotal = e.SubTotal
                     };
                     Result.Add(bead);
                 }
@@ -111,10 +109,6 @@ namespace JewelryMaking.Services
                     SourceId = entity.SourceId,
                     Description = entity.Description,
                     FileAsBytes = entity.File
-                    //    if (null != FileAsBytes){
-                    //    FileAsBytes = entity.File
-                    //}
-                    //else { FileAsBytes}
                 };
             }
         }
@@ -136,7 +130,10 @@ namespace JewelryMaking.Services
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
                 entity.Description = model.Description;
-                entity.File = model.FileAsBytes;
+                if (model.File != null)
+                { 
+                    entity.File = _FileService.ConvertToBytes(model.File);
+                }
 
                 return ctx.SaveChanges() == 1;
             }

@@ -109,16 +109,15 @@
         <dd class="col-md-8">
             @Html.DisplayFor(model => model.SourceId)
         </dd>
-
     </dl>
 
     <div class="itemImage">
-        @if (Model.File != "")
+        @if (Model.ImageFile != "")
         {
-            <img src="@Model.File" height=200 width=200 />}
+            <img src="@Model.ImageFile" height=200 width=200 />}
     </div>
 </div>
-<p>
+<div>
     @Html.ActionLink("Edit", "Edit", new { id = Model.StringingMaterialId }, new { @class = "btn btn-chng" }) |
     @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
-</p>
+</div>

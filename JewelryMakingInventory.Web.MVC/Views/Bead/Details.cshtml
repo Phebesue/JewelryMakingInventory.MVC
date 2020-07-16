@@ -127,23 +127,22 @@
         </dd>
 
         <dt class="col-md-4">
-            @Html.DisplayNameFor(model => model.File)
+            @Html.DisplayNameFor(model => model.ImageFile)
         </dt>
-
     </dl>
 
 
     <div class="itemImage">
-        @if (Model.File != "")
+        @if (Model.ImageFile != "")
         {
-            <img src="@Model.File" height=200 width=200 />}
+            <img src="@Model.ImageFile" height=200 width=200 />}
         //else
         //{
         @*<img src="../../Content/Assets/blank.png" alt="no image" /> }*@
     </div>
 
 </div>
-<p>
+<divp>
     @Html.ActionLink("Edit", "Edit", new { id = Model.BeadId }, new { @class = "btn btn-chng" }) |
     @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-black" })
-</p>
+</divp>

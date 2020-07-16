@@ -109,14 +109,7 @@
             </div>
         </div>
 
-        <div>
-            @Html.TextBox("file", "", new { type = "file" })
-
-            @*<input type="submit" value="Upload" />*@
-
-            @*@ViewBag.Message*@
-
-        </div>
+            <input type="file" name="File" id="File" onchange="fileCheck(this);" />
 
         <div class="form-group row">
             <div class="col-md-4"> </div>

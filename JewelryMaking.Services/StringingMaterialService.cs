@@ -7,7 +7,8 @@ namespace JewelryMaking.Services
 {
     public class StringingMaterialService
     {
-        //___________________Create____________
+        //___________________Post-Create____________
+
         FileUploadService _FileService = new FileUploadService();
 
         public bool CreateStringingMaterial(StringingMaterialCreate model)
@@ -49,7 +50,6 @@ namespace JewelryMaking.Services
                         Size = e.Size,
                         Color = e.Color,
                         LocationId = e.LocationId,
-                        //StringingImage = e.StringingImage
                     };
                     Result.Add(stringingMaterial);
                 }
@@ -82,7 +82,7 @@ namespace JewelryMaking.Services
                 return Result;
             }
         }
-        //___________________Get-By Id____________
+        //___________________Get/Read-By Id____________
         public StringingMaterialDetail GetStringingMaterialById(int stringingMaterialId)
         {
             using (var ctx = new ApplicationDbContext())
@@ -105,7 +105,7 @@ namespace JewelryMaking.Services
                 };
             }
         }
-        //___________________Edit-Update____________
+        //___________________Put-Update____________
         public bool UpdateStringingMaterial(StringingMaterialEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -121,7 +121,7 @@ namespace JewelryMaking.Services
                 entity.Description = model.Description;
                 entity.LocationId = model.LocationId;
                 entity.SourceId = model.SourceId;
-                //entity.StringingImage = model.StringingImage;
+                entity.File = _FileService.ConvertToBytes(model.File);
 
                 return ctx.SaveChanges() == 1;
             }

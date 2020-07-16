@@ -27,7 +27,7 @@ namespace JewelryMaking.Models
 
         public byte[] FileAsBytes { get; set; } // this is like a backing field. 
         [Display(Name = "Image")]
-        public string File
+        public string ImageFile
         {
             get
             {

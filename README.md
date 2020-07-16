@@ -6,3 +6,4 @@
         <p>
             Once you've entered a few of your regular sources, you should move on to entering the location in which you store your materials. Following location, you can begin entering the actual supplies. They are broken down into 3 classes, Beads, Stringing Materials, and Findings (all the little pieces that makeup the rest, like clasps, spacers, bead caps, etc.)
         </p>
+        <a> href: https://jewelrymakinginventory.azurewebsites.net/</a>
